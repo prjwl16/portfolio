@@ -9,14 +9,14 @@ import {
     IconBrandLinkedin,
     IconBrandTwitter,
     IconBriefcase2,
-    IconBulb, IconDownload,
+    IconBulb,
+    IconDownload,
 } from "@tabler/icons-react";
 import {Navlink} from "@/types/navlink";
 
 
-
 export function FloatingDockAceternity() {
-    const links : Navlink[]= [
+    const links: Navlink[] = [
         {
             label: "Home",
             icon: (
@@ -90,11 +90,10 @@ export function FloatingDockAceternity() {
     ];
 
     return (
-        <div className="flex items-center justify-center w-full">
-            <FloatingDock
-                mobileClassName="translate-y-20"
-                items={links}
-            />
-        </div>
+        <FloatingDock
+            mobileClassName="fixed bottom-2 right-2 z-50 transform -translate-x-1/2"
+            desktopClassName={"fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 mb-4"}
+            items={links}
+        />
     );
 }
