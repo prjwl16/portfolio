@@ -6,11 +6,10 @@ export default function Currently() {
     return (
         <Container>
             <span className="text-4xl">⚡</span>
-            <Heading className="font-black mb-10">
+            <Heading className="font-black mb-6">
                 {" "}
                 What I&apos;ve been working on
             </Heading>
-
             <Products />
         </Container>
     );

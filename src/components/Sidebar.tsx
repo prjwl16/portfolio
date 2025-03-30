@@ -17,10 +17,10 @@ export const Sidebar = () => {
   const [open, setOpen] = useState(isMobile() ? false : true);
 
   const handleDownloadResume = () => {
-    window.open(
-      "https://drive.google.com/file/d/1adseiB6ro928yUyRDVmqCDN50c4VBe6a/view?usp=sharing",
-      "_blank"
-    );
+    // window.open(
+    //   "https://drive.google.com/file/d/148bxIDqv19webWOlYBpLrO9GEGd7w82U/view?usp=sharing",
+    //   "_blank"
+    // );
   }
 
   return (

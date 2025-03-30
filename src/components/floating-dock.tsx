@@ -9,13 +9,16 @@ import {
     IconBrandLinkedin,
     IconBrandTwitter,
     IconBriefcase2,
-    IconBulb,
+    IconBulb, IconDownload,
 } from "@tabler/icons-react";
+import {Navlink} from "@/types/navlink";
+
+
 
 export function FloatingDockAceternity() {
-    const links = [
+    const links : Navlink[]= [
         {
-            title: "Home",
+            label: "Home",
             icon: (
                 <IconBolt className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
             ),
@@ -23,55 +26,69 @@ export function FloatingDockAceternity() {
         },
 
         {
-            title: "Work-History",
+            label: "Work-History",
             icon: (
                 <IconBriefcase2 className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
             ),
             href: "/work",
         },
         {
-            title: "Currently",
+            label: "Currently",
             icon: (
                 <IconBulb className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
             ),
             href: "/currently",
         },
         {
-            title: "Blogs",
+            label: "Blogs",
             icon: (
                 <IconArticle className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
             ),
             href: "/blog",
         },
         {
-            title: "GitHub",
+            label: "GitHub",
             icon: (
                 <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
             ),
             href: "https://www.linkedin.com/in/moreprajwal/",
+            target: "_blank",
         },
         {
-            title: "X",
+            label: "X",
             icon: (
                 <IconBrandTwitter className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
             ),
             href: "https://x.com/prjwl_16",
+            target: "_blank",
         },
         {
-            title: "LinkedIn",
+            label: "LinkedIn",
             icon: (
                 <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
             ),
             href: "https://www.linkedin.com/in/moreprajwal/",
+            target: "_blank",
         },
         {
-            title: "LeetCode",
+            label: "LeetCode",
             icon: (
                 <IconBrandLeetcode className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
             ),
             href: "https://leetcode.com/u/prjwl16/",
+            target: "_blank",
         },
+        {
+            label: "Resume",
+            icon: (
+                <IconDownload className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
+            ),
+            href: "https://drive.google.com/file/d/1aWmywIm8Pi2TJhQhEATOgUCyh9V622NE/view?usp=sharing",
+            target: "_blank",
+        },
+
     ];
+
     return (
         <div className="flex items-center justify-center w-full">
             <FloatingDock

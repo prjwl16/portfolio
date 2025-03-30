@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
+import {IconBulb, IconLayoutNavbarCollapse} from "@tabler/icons-react";
 import {
   AnimatePresence,
   MotionValue,
@@ -10,13 +10,14 @@ import {
 } from "motion/react";
 import Link from "next/link";
 import { useRef, useState } from "react";
+import {Navlink} from "@/types/navlink";
 
 export const FloatingDock = ({
   items,
   desktopClassName,
   mobileClassName,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: Navlink[];
   desktopClassName?: string;
   mobileClassName?: string;
 }) => {
@@ -32,7 +33,7 @@ const FloatingDockMobile = ({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: Navlink[];
   className?: string;
 }) => {
   const [open, setOpen] = useState(false);
@@ -46,7 +47,7 @@ const FloatingDockMobile = ({
           >
             {items.map((item, idx) => (
               <motion.div
-                key={item.title}
+                key={item.label}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{
                   opacity: 1,
@@ -63,7 +64,7 @@ const FloatingDockMobile = ({
               >
                 <Link
                   href={item.href}
-                  key={item.title}
+                  key={item.label}
                   className="h-10 w-10 rounded-full bg-gray-50 flex items-center justify-center border"
                 >
                   <div className="h-4 w-4">{item.icon}</div>
@@ -87,7 +88,7 @@ const FloatingDockDesktop = ({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: Navlink[];
   className?: string;
 }) => {
   let mouseX = useMotionValue(Infinity);
@@ -101,7 +102,7 @@ const FloatingDockDesktop = ({
       )}
     >
       {items.map((item) => (
-        <IconContainer mouseX={mouseX} key={item.title} {...item} />
+          <IconContainer key={item.label} mouseX={mouseX} {...item} icon={item.icon ?? <IconBulb />} />
       ))}
     </motion.div>
   );
@@ -109,14 +110,16 @@ const FloatingDockDesktop = ({
 
 function IconContainer({
   mouseX,
-  title,
+  label,
   icon,
   href,
+  target
 }: {
   mouseX: MotionValue;
-  title: string;
+  label: string;
   icon: React.ReactNode;
   href: string;
+  target?: string;
 }) {
   let ref = useRef<HTMLDivElement>(null);
 
@@ -161,7 +164,7 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link href={href}>
+    <Link href={href} target={target}>
       <motion.div
         ref={ref}
         style={{ width, height }}
@@ -177,7 +180,7 @@ function IconContainer({
               exit={{ opacity: 0, y: 2, x: "-50%" }}
               className="px-2 py-0.5 whitespace-pre rounded-md bg-gray-100 border dark:bg-neutral-800 dark:border-neutral-900 dark:text-white border-gray-200 text-neutral-700 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs"
             >
-              {title}
+              {label}
             </motion.div>
           )}
         </AnimatePresence>

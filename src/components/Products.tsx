@@ -5,8 +5,8 @@ import {IconCircleCheckFilled} from "@tabler/icons-react";
 
 export const Products = () => {
     return (
-        <div className={"py-12"}>
-            <Paragraph>Well, I have been working on a these technologies for a while now.</Paragraph>
+        <div className={""}>
+            <Paragraph className={"mb-8"}>Well, I have been working on a these technologies for a while now.</Paragraph>
             <div className={"grid grid-cols-1 md:grid-cols-2 gap-4"}>
                 <div className="flex space-x-1 items-start">
                     <IconCircleCheckFilled className="flex-none h-3 w-4 mt-1 text-neutral-300"/>
