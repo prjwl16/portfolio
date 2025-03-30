@@ -18,6 +18,24 @@ export const TechStack = () => {
       className: "h-10 w-10",
     },
     {
+      title: "React.js",
+      src: "/images/logos/react.png",
+
+      className: "h-10 w-14",
+    },
+    {
+      title: "Javascript",
+      src: "/images/logos/js.png",
+
+      className: "h-10 w-14",
+    },
+    {
+      title: "Kafka",
+      src: "/images/logos/kafka.png",
+
+      className: "h-10 w-24",
+    },
+    {
       title: "Next.js",
       src: "/images/logos/next.png",
 
@@ -32,6 +50,12 @@ export const TechStack = () => {
     {
       title: "Node",
       src: "/images/logos/node.png",
+
+      className: "h-10 w-12",
+    },
+    {
+      title: "postgreSQL",
+      src: "/images/logos/psql.png",
 
       className: "h-10 w-12",
     },

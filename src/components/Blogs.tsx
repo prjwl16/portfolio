@@ -8,7 +8,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 
 export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
-console.log(blogs);
   const [hovered, setHovered] = useState<string | null>(null);
   return (
     <div className="max-w-5xl mx-auto my-10">
@@ -27,7 +26,8 @@ console.log(blogs);
         >
           <Link
             key={`blog-${blog.title}`}
-            href={`/blog/${blog.slug}`}
+            href={blog.href}
+            target="_blank"
             className="relative my-10 block"
             onMouseEnter={() => setHovered(blog.slug)}
             onMouseLeave={() => setHovered(null)}

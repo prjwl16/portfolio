@@ -42,7 +42,7 @@ export default function About() {
 
       <div className="max-w-4xl">
         <Paragraph className=" mt-4">
-          Hey, I&apos;m Prajwal More – a Software Development Engineer at Flipkart,
+          Hey, I&apos;m Prajwal More – A Software Engineer currently working at Cleartrip,
           passionate about building scalable and high-performance systems.
           I specialize in backend development, working extensively with in-memory
           databases, queue systems, analytical databases, and large-scale distributed
