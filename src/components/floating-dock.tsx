@@ -51,7 +51,7 @@ export function FloatingDockAceternity() {
             icon: (
                 <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300"/>
             ),
-            href: "https://www.linkedin.com/in/moreprajwal/",
+            href: "https://github.com/prjwl16/",
             target: "_blank",
         },
         {
