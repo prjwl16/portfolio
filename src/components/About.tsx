@@ -41,30 +41,45 @@ export default function About() {
       </div>
 
       <div className="max-w-4xl">
-        <Paragraph className=" mt-4">
-          Hey, I&apos;m Prajwal More – A Software Engineer currently working at Cleartrip,
-          passionate about building scalable and high-performance systems.
-          I specialize in backend development, working extensively with in-memory
-          databases, queue systems, analytical databases, and large-scale distributed
-          architectures.
+        <Paragraph className="">
+          I like software that feels thoughtful — the kind that’s clean, fast, and doesn’t make users suffer.
+          I&#39;m into systems, structure, and the little design choices most people ignore.
+          Currently figuring out how to get better at all of it, one bug fix and brain dump at a time.
         </Paragraph>
-        <Paragraph className=" mt-4">
-          I have hands-on experience with Apache Dubbo, Docker, RPC frameworks,
-          and microservices, enabling me to design and optimize systems that
-          handle massive loads efficiently. My focus is on building resilient,
-          scalable solutions that power complex business processes.
+        <Paragraph className="mt-4">
+          I talk work/life/code on{" "}
+          <a
+            href="https://linkedin.com/in/moreprajwal"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline text-[#0A66C2]" // LinkedIn blue
+          >
+            LinkedIn
+          </a>
+          , ship whatever compiles on{" "}
+          <a
+            href="https://github.com/prjwl16"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline text-black" // GitHub dark/light
+          >
+            GitHub
+          </a>
+          , and occasionally drop half-baked thoughts on{" "}
+          <a
+            href="https://x.com/prjwl_16"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline text-[#1DA1F2] dark:text-[#1DA1F2]" // Twitter/X blue
+          >
+            X
+          </a>
+          — all in a day’s scroll.
         </Paragraph>
-        <Paragraph className=" mt-4">
-          When I&apos;m not coding, I&apos;m constantly exploring new technologies,
-          refining my problem-solving skills, and brainstorming ideas
-          that push the boundaries of innovation.
-        </Paragraph>
-        <Paragraph className=" mt-4">
-          Thank you for being here, and I can&apos;t wait to embark on this
-          adventure with you.
-          Let’s build something amazing together! 🚀
-        </Paragraph>
+
+
       </div>
+
     </div>
   );
 }

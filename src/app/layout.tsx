@@ -26,7 +26,6 @@ export default function RootLayout({children,}: { children: React.ReactNode; }) 
                 "flex antialiased h-screen overflow-hidden bg-gray-100"
             )}
         >
-        <FloatingDockAceternity/>
         {/*<Sidebar />*/}
         <div className="lg:pl-2 lg:pt-2 bg-gray-100 flex-1 overflow-y-auto">
             <div
