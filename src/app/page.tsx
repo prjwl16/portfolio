@@ -31,7 +31,7 @@ export default function Home() {
               alt="about"
               width={250}
               height={250}
-              className="rounded-xl object-contain w-full h-full rotate-3 hover:rotate-0 transition transform duration-200 shadow-md"
+              className="rounded-xl object-contain w-full h-full rotate-3 hover:rotate-0 transition transform duration-200"
             />
           </div>
         </div>
