@@ -12,7 +12,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex-1">
             <span className="text-4xl">👋</span>
-            <Heading className="font-black mt-2">Hello there.. <br/> I&apos;m Prajwal.!</Heading>
+            <Heading className="font-black mt-2">Hello there! <br/> I&apos;m Prajwal</Heading>
             <Paragraph className="mt-4">
               I&apos;m a Software Engineer at Flipkart who loves{" "}
               <Highlight>building real products</Highlight> the kind that don’t just work,
@@ -31,12 +31,12 @@ export default function Home() {
               alt="about"
               width={250}
               height={250}
-              className="rounded-xl object-contain w-full h-full rotate-3 hover:rotate-0 transition transform duration-200"
+              className="rounded-xl object-contain w-full h-full rotate-3 hover:rotate-0 transition transform duration-200 shadow-md"
             />
           </div>
         </div>
         <Paragraph className="border-l-4 border-muted-foreground pl-4 leading-relaxed mt-8">
-          Lately, I’ve been building something of my own — an idea that sits at the intersection of tech, habits,
+          Lately, I’ve been building something of my own an idea that sits at the intersection of tech, habits,
           and care. It&#39;s early, still evolving, but rooted in a real problem that I think deserves a better
           solution. Most of the work happens quietly, in between work hours and long walks, but it’s the kind of
           thing that makes me want to open my laptop even on tired days.
