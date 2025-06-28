@@ -59,11 +59,11 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
               <div className="space-y-6">
                 <Paragraph className="text-lg leading-relaxed text-neutral-600">
                   I&apos;m a Software Engineer at Flipkart who loves{" "}
-                  <span className="text-neutral-800 font-medium">building real products</span> — the kind that don't just work,
-                  but quietly make life easier for people (and don't break on Fridays).
+                  <span className="text-neutral-800 font-medium">building real products</span> — the kind that don&#39;t just work,
+                  but quietly make life easier for people (and don&#39;t break on Fridays).
                 </Paragraph>
                 <Paragraph className="text-lg leading-relaxed text-neutral-600">
-                  Over the past <span className="text-neutral-800 font-medium">3 years</span>, I've worked across startups and product teams,
+                  Over the past <span className="text-neutral-800 font-medium">3 years</span>, I&#39;ve worked across startups and product teams,
                   learning how to turn vague problems into working software and how to stay calm when nothing deploys as
                   planned.
                 </Paragraph>
@@ -71,16 +71,16 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
 
               <div className="border-l-2 border-neutral-300 pl-6">
                 <Paragraph className="text-base leading-relaxed text-neutral-600 italic">
-                  Lately, I've been building something of my own — an idea that sits at the intersection of tech, habits,
-                  and care. It's early, still evolving, but rooted in a real problem that I think deserves a better
+                  Lately, I&#39;ve been building something of my own — an idea that sits at the intersection of tech, habits,
+                  and care. It&#39;s early, still evolving, but rooted in a real problem that I think deserves a better
                   solution.
                 </Paragraph>
               </div>
 
               <div className="space-y-4">
                 <Paragraph className="text-base leading-relaxed text-neutral-600">
-                  I like software that feels thoughtful — the kind that's clean, fast, and doesn't make users suffer.
-                  I'm into systems, structure, and the little design choices most people ignore.
+                  I like software that feels thoughtful — the kind that&#39;s clean, fast, and doesn&#39;t make users suffer.
+                  I&#39;m into systems, structure, and the little design choices most people ignore.
                 </Paragraph>
                 
                 <Paragraph className="text-base leading-relaxed text-neutral-600">

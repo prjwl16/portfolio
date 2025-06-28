@@ -69,10 +69,10 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
               <div className="space-y-8">
                 <div className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
                   <Paragraph className="text-lg sm:text-xl leading-relaxed text-neutral-600 font-light">
-                    I build software that doesn't suck.
+                    I build software that doesn&#39;t suck.
                     <br />
                     <span className="text-neutral-800">Three years</span> of turning coffee into code,
-                    bugs into features, and "it works on my machine" into actual solutions.
+                    bugs into features, and &#34;it works on my machine&#34; into actual solutions.
                     <br />
                     <span className="text-neutral-500">Tech stack? Whatever gets the job done faster.</span>
                   </Paragraph>
@@ -81,7 +81,7 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
                 <div className="border-l border-neutral-200 pl-6 max-w-md">
                   <Paragraph className="text-base text-neutral-500 italic font-light leading-relaxed">
                     Currently building something at the intersection of tech and human habits.
-                    It's early, messy, and probably over-engineered — exactly how I like it.
+                    It&#39;s early, messy, and probably over-engineered — exactly how I like it.
                   </Paragraph>
                 </div>
               </div>
