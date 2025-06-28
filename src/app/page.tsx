@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <Container>
-      <div className="min-h-screen relative">
+      <div className="">
         <AnimatePresence mode="wait">
           {!showProjects ? (
             <motion.div
