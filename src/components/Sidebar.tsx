@@ -11,10 +11,16 @@ import { socials } from "@/constants/socials";
 import { Badge } from "./Badge";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
-import { isMobile } from "@/lib/utils";
+import { useIsMobile } from "@/lib/utils";
 
 export const Sidebar = () => {
-  const [open, setOpen] = useState(isMobile() ? false : true);
+  const isMobileDevice = useIsMobile();
+  const [open, setOpen] = useState(false);
+
+  // Set initial state after component mounts to avoid hydration mismatch
+  React.useEffect(() => {
+    setOpen(!isMobileDevice);
+  }, [isMobileDevice]);
 
   const handleDownloadResume = () => {
     // window.open(

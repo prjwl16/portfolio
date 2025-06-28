@@ -6,11 +6,6 @@ import React, { useEffect, Children, useState, useRef } from "react";
 import clsx from "clsx";
 
 export const CodeWindow = ({ title, children }: any) => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
   useEffect(() => {
     // Prism.highlightAll();
   }, []);
@@ -21,7 +16,7 @@ export const CodeWindow = ({ title, children }: any) => {
   const childRef = useRef<any>(null);
 
   const handleClick = (e: any) => {
-    if (childRef.current) {
+    if (childRef.current && typeof navigator !== "undefined" && navigator.clipboard) {
       const textToCopy = childRef.current.innerText;
 
       navigator.clipboard
@@ -39,8 +34,7 @@ export const CodeWindow = ({ title, children }: any) => {
   };
 
   return (
-    isClient && (
-      <div
+    <div
         className={clsx(
           "bg-slate-900 rounded-md w-auto overflow-hidden flex flex-col my-10 prose prose-sm ",
           "prose prose-slate max-w-none dark:prose-invert dark:text-slate-400",
@@ -79,6 +73,5 @@ export const CodeWindow = ({ title, children }: any) => {
 
         <div ref={childRef}>{children}</div>
       </div>
-    )
   );
 };

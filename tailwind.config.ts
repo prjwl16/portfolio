@@ -21,6 +21,9 @@ const config: Config = {
         primary: "var(--neutral-700)",
         secondary: "var(--neutral-500)",
   			},
+      perspective: {
+        '1000': '1000px',
+      },
   			},
   		},
   plugins: [require("@tailwindcss/typography"), addVariablesForColors],
