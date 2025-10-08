@@ -5,6 +5,7 @@ import { Heading } from "./Heading";
 import { Paragraph } from "./Paragraph";
 import Image from "next/image";
 import { VerticalImageCarousel } from "./VerticalImageCarousel";
+import Link from "next/link";
 
 interface BioSectionProps {
   onShowProjects: () => void;
@@ -69,7 +70,7 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
               <div className="space-y-8">
                 <div className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
                   <Paragraph className="text-lg sm:text-xl leading-relaxed text-neutral-600 font-light">
-                    I build software that doesn&#39;t suck.
+                    I enjoy creating software that solves real problems. <br />
                     <br />
                     <span className="text-neutral-800">Three years</span> of turning coffee into code,
                     bugs into features, and &#34;it works on my machine&#34; into actual solutions.
@@ -82,6 +83,11 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
                   <Paragraph className="text-base text-neutral-500 italic font-light leading-relaxed">
                     Currently building something at the intersection of tech and human habits.
                     It&#39;s early, messy, and probably over-engineered — exactly how I like it.
+                    <br />
+                    <Link href="https://dearpatient.in" className="">
+                      Check it out here.
+                      <span className="text-orange-500 font-medium"> Dear Patient</span>
+                    </Link>
                   </Paragraph>
                 </div>
               </div>
@@ -93,9 +99,9 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
                     Specialty
                   </div>
                   <div className="text-base text-neutral-700 font-medium">
-                    Products that work
+                    Products that make life easier.
                     <br />
-                    <span className="text-neutral-500 font-light">(even on Fridays)</span>
+                    <span className="text-neutral-500 font-light">(and occasionally better Fridays)</span>
                   </div>
                 </div>
                 <div className="space-y-2">
@@ -105,7 +111,7 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
                   <div className="text-base text-neutral-700 font-medium">
                     Language agnostic
                     <br />
-                    <span className="text-neutral-500 font-light">(whatever works faster)</span>
+                    <span className="text-neutral-500 font-light">(whatever helps ship faster and cleaner)</span>
                   </div>
                 </div>
               </div>
