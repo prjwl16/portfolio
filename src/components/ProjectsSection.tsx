@@ -127,22 +127,33 @@ export const ProjectsSection = ({ onBack }: ProjectsSectionProps) => {
                     className="group relative"
                   >
                     <div className={`relative bg-white rounded-2xl ${shadowClass} hover:shadow-xl transition-all duration-500 overflow-hidden border border-neutral-100 hover:border-neutral-200 h-full flex flex-col`}>
-                      {/* Project Image */}
+                      {/* Project Image or Link Preview */}
                       <div className="relative h-48 overflow-hidden">
-                        <Image
-                          src={project.thumbnail}
-                          alt={project.title}
-                          fill
-                          className="object-cover transition-transform duration-700 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                        {project.showLinkPreview ? (
+                          <iframe
+                            src={project.href}
+                            title={project.title}
+                            className="w-full h-full border-0 pointer-events-none"
+                            sandbox="allow-scripts allow-same-origin"
+                          />
+                        ) : (
+                          <>
+                            <Image
+                              src={project.thumbnail}
+                              alt={project.title}
+                              fill
+                              className="object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                          </>
+                        )}
 
                         {/* Floating index number */}
                         <motion.div
                           initial={{ scale: 0, rotate: -180 }}
                           animate={{ scale: 1, rotate: 0 }}
                           transition={{ delay: index * 0.2 + 0.5, type: "spring" }}
-                          className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center font-bold text-neutral-800 shadow-lg"
+                          className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center font-bold text-neutral-800 shadow-lg z-10"
                         >
                           {String(index + 1).padStart(2, '0')}
                         </motion.div>

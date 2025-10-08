@@ -13,46 +13,76 @@ export const SingleProduct = ({ product }: { product: Product }) => {
   );
   return (
     <div className="py-10">
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: 30,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 0.5,
-        }}
-        key={product.slug}
-        className="relative"
-      >
-        <Image
-          src={activeImage}
-          alt="thumbnail"
-          height="1000"
-          width="1000"
-          className="rounded-md object-contain"
-        />
-        <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
-      </motion.div>
-      <div className="flex flex-row justify-center my-8 flex-wrap">
-        {product.images.map((image, idx) => (
-          <button
-            onClick={() => setActiveImage(image)}
-            key={`image-thumbnail-${idx}`}
+      {product.showLinkPreview ? (
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          key={product.slug}
+          className="relative w-full"
+        >
+          <div className="w-full aspect-video rounded-md overflow-hidden border border-neutral-200 shadow-lg">
+            <iframe
+              src={product.href}
+              className="w-full h-full"
+              title={product.title}
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+            />
+          </div>
+          <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
+        </motion.div>
+      ) : (
+        <>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            key={product.slug}
+            className="relative"
           >
             <Image
-              src={image}
-              alt="product thumbnail"
+              src={activeImage}
+              alt="thumbnail"
               height="1000"
               width="1000"
-              className="h-14 w-16 md:h-40 md:w-60 object-cover object-top mr-4 mb-r border rounded-lg border-neutral-100"
+              className="rounded-md object-contain"
             />
-          </button>
-        ))}
-      </div>
+            <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
+          </motion.div>
+          <div className="flex flex-row justify-center my-8 flex-wrap">
+            {product.images.map((image, idx) => (
+              <button
+                onClick={() => setActiveImage(image)}
+                key={`image-thumbnail-${idx}`}
+              >
+                <Image
+                  src={image}
+                  alt="product thumbnail"
+                  height="1000"
+                  width="1000"
+                  className="h-14 w-16 md:h-40 md:w-60 object-cover object-top mr-4 mb-r border rounded-lg border-neutral-100"
+                />
+              </button>
+            ))}
+          </div>
+        </>
+      )}
       <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
         <Heading className="font-black mb-2 pb-1"> {product.title}</Heading>
         <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
