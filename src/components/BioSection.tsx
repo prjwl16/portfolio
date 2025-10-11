@@ -70,19 +70,17 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
               <div className="space-y-8">
                 <div className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
                   <Paragraph className="text-lg sm:text-xl leading-relaxed text-neutral-600 font-light">
-                    I enjoy creating software that solves real problems. <br />
-                    <br />
-                    <span className="text-neutral-800">Three years</span> of turning coffee into code,
+                    <span className="text-neutral-800">Years</span> of turning coffee into code,
                     bugs into features, and &#34;it works on my machine&#34; into actual solutions.
                     <br />
-                    <span className="text-neutral-500">Tech stack? Whatever gets the job done faster.</span>
                   </Paragraph>
                 </div>
 
                 <div className="border-l border-neutral-200 pl-6 max-w-md">
                   <Paragraph className="text-base text-neutral-500 italic font-light leading-relaxed">
                     Currently building something at the intersection of tech and human habits.
-                    It&#39;s early, messy, and probably over-engineered — exactly how I like it.
+                    It&#39;s early, messy, and probably over-engineered, 
+                    <span className="text-neutral-800"> exactly how I like it.</span>
                     <br />
                     <Link href="https://dearpatient.in" className="">
                       Check it out here.
@@ -95,9 +93,9 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
               {/* Skills Grid */}
               <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-lg">
                 <div className="space-y-2">
-                  <div className="text-xs font-medium text-neutral-400 tracking-wider uppercase">
+                  {/* <div className="text-xs font-medium text-neutral-400 tracking-wider uppercase">
                     Specialty
-                  </div>
+                  </div> */}
                   <div className="text-base text-neutral-700 font-medium">
                     Products that make life easier.
                     <br />
@@ -105,9 +103,9 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-xs font-medium text-neutral-400 tracking-wider uppercase">
+                  {/* <div className="text-xs font-medium text-neutral-400 tracking-wider uppercase">
                     Approach
-                  </div>
+                  </div> */}
                   <div className="text-base text-neutral-700 font-medium">
                     Language agnostic
                     <br />
@@ -118,7 +116,7 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
 
               {/* Actions */}
               <div className="space-y-6">
-                <div className="flex gap-4 sm:gap-6 md:gap-8 text-sm">
+                <div className="flex justify-center sm:justify-start gap-4 sm:gap-6 md:gap-8 text-sm hover:text-neutral-700 transition-colors font-medium tracking-wide">
                   <a
                     href="https://linkedin.com/in/moreprajwal"
                     target="_blank"
@@ -142,6 +140,14 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
                     className="text-neutral-400 hover:text-neutral-700 transition-colors font-medium tracking-wide"
                   >
                     X
+                  </a>
+                  <a
+                    href="https://www.instagram.com/prajwal._.16/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-400 hover:text-neutral-700 transition-colors font-medium tracking-wide"
+                  >
+                    Instagram
                   </a>
                 </div>
 

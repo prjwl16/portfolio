@@ -24,7 +24,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
             <body
                 className={twMerge(
                     inter.className,
-                    "flex antialiased h-screen bg-gray-100 overflow-hidden"
+                    "flex antialiased bg-gray-100 overflow-hidden"
                 )}
             >
                 <Analytics />
@@ -32,7 +32,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
                 {/*<Sidebar />*/}
                 <div className="p-2 flex-1 overflow-y-auto">
                     <div
-                        className="flex-1 h-full bg-white lg:rounded-xl border border-transparent lg:border-neutral-200 overflow-auto">
+                        className="flex justify-center items-center flex-col flex-1 bg-white lg:rounded-xl border border-transparent lg:border-neutral-200 overflow-auto h-screen">
                         {children}
                         <Footer />
                     </div>

@@ -1,10 +1,10 @@
 "use client";
-import {Container} from "@/components/Container";
-import {Heading} from "@/components/Heading";
-import {Highlight} from "@/components/Highlight";
-import {Paragraph} from "@/components/Paragraph";
-import {ProjectsSection} from "@/components/ProjectsSection";
-import {BioSection} from "@/components/BioSection";
+import { Container } from "@/components/Container";
+import { Heading } from "@/components/Heading";
+import { Highlight } from "@/components/Highlight";
+import { Paragraph } from "@/components/Paragraph";
+import { ProjectsSection } from "@/components/ProjectsSection";
+import { BioSection } from "@/components/BioSection";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <Container>
-      <div className="">
+      <div className="flex flex-col flex-1">
         <AnimatePresence mode="wait">
           {!showProjects ? (
             <motion.div
@@ -48,7 +48,7 @@ export default function Home() {
               exit="out"
               variants={pageVariants}
               transition={pageTransition}
-              className="w-full max-w-7xl mx-auto"
+              className="w-full max-w-7xl mx-auto h-[50px]"
             >
               <ProjectsSection onBack={() => setShowProjects(false)} />
             </motion.div>

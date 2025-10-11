@@ -12,9 +12,9 @@ interface ProjectsSectionProps {
 
 export const ProjectsSection = ({ onBack }: ProjectsSectionProps) => {
   return (
-    <div className="h-screen relative overflow-hidden">
+    <div className="h-[calc(100dvh-5.25rem)] sm:h-[calc(100dvh-10.25rem)] relative overflow-auto">
       {/* Fixed background with floating shapes */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-100">
+      <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 rounded-md">
         <motion.div
           animate={{
             rotate: 360,
