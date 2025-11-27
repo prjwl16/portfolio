@@ -13,7 +13,7 @@ interface ProjectsSectionProps {
 
 export const ProjectsSection = ({ onBack }: ProjectsSectionProps) => {
 	return (
-		<div className="h-dvh overflow-hidden relative h-screen w-full">
+		<div className="h-dvh relative h-screen w-full overflow-x-hidden overflow-y-hidden">
 			{/* Fixed background with floating shapes */}
 			<div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 rounded-md">
 				<motion.div
@@ -91,7 +91,7 @@ export const ProjectsSection = ({ onBack }: ProjectsSectionProps) => {
 
 				{/* Scrollable Projects Grid */}
 				<div className="flex-1 overflow-y-auto overflow-x-hidden scrollbar-hide">
-					<div className="max-w-7xl mx-auto py-8 pb-32 px-2">
+					<div className="max-w-7xl mx-auto py-8 pb-32 px-4 sm:px-6">
 						<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
 							{projects.map((project, index) => {
 								const isFirstRow = index < 2;

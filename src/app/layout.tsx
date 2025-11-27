@@ -20,11 +20,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<body className={twMerge(inter.className, "flex antialiased overflow-hidden")}>
+			<body className={twMerge(inter.className, "flex antialiased overflow-x-hidden overflow-y-hidden")}>
 				<Analytics />
 				<SpeedInsights />
 				{/*<Sidebar />*/}
-				<div className="flex-1 overflow-y-auto">
+				<div className="flex-1 overflow-y-auto overflow-x-hidden">
 					{children}
 					<Footer />
 				</div>
