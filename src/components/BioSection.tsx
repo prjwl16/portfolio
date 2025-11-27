@@ -13,7 +13,7 @@ interface BioSectionProps {
 
 export const BioSection = ({ onShowProjects }: BioSectionProps) => {
 	return (
-		<div className="">
+		<div className="relative h-screen w-full overflow-hidden">
 			{/* Background with vertical image carousel */}
 			<div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 border-black">
 				{/* Vertical Image Carousel */}
@@ -37,8 +37,8 @@ export const BioSection = ({ onShowProjects }: BioSectionProps) => {
 			</div>
 
 			{/* Content */}
-			<div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 md:px-8 py-8">
-				<div className="max-w-6xl mx-auto w-full">
+			<div className="relative z-10 h-full overflow-y-auto">
+				<div className="max-w-6xl mx-auto w-full px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
 					{/* Main Layout */}
 					<div className="grid grid-cols-12 gap-4 sm:gap-6 md:gap-8 items-center">
 						{/* Left: Content */}
