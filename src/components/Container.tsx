@@ -1,9 +1,5 @@
 import React from "react";
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <main className={`max-w-4xl w-full mx-auto py-4 sm:py-8 md:py-12 lg:py-20 px-4 md:px-10`}>
-      {children}
-    </main>
-  );
+	return <main className={`max-w-4xl w-dvh mx-auto py-4 sm:py-8 md:py-12 lg:py-20 px-4 md:px-10`}>{children}</main>;
 };
