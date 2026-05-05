@@ -42,7 +42,7 @@ export default function About() {
 
       <div className="max-w-4xl">
         <Paragraph className="">
-          I like software that feels thoughtful — the kind that’s clean, fast, and doesn’t make users suffer.
+          I like software that feels thoughtful... the kind that’s clean, fast, and doesn’t make users suffer.
           I&#39;m into systems, structure, and the little design choices most people ignore.
           Currently figuring out how to get better at all of it, one bug fix and brain dump at a time.
         </Paragraph>
@@ -74,7 +74,7 @@ export default function About() {
           >
             X
           </a>
-          — all in a day’s scroll.
+          ... all in a day’s scroll.
         </Paragraph>
 
 
