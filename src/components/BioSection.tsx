@@ -12,10 +12,10 @@ const socials = [
 ];
 
 const facts = [
-	{ Icon: MapPin, text: "based in India · working at Flipkart" },
-	{ Icon: Zap, text: "3+ years shipping web products that scale" },
-	{ Icon: Sparkles, text: "ts, next.js, node — anything that ships fast" },
-	{ Icon: Coffee, text: "runs on chai, side projects & cliffhanger commits" },
+	{ Icon: MapPin, text: "based in India, writing code at Flipkart" },
+	{ Icon: Zap, text: "a few years in, still learning every day" },
+	{ Icon: Sparkles, text: "ts, next.js, node — mostly whatever the job needs" },
+	{ Icon: Coffee, text: "runs on chai and a bit of curiosity" },
 ];
 
 export const BioSection = () => {
@@ -30,7 +30,7 @@ export const BioSection = () => {
 				style={{ borderRadius: wobbly.sm }}
 			>
 				<span className="font-hand text-ink text-base md:text-lg">
-					hi, i&apos;m building stuff
+					hey, thanks for stopping by
 				</span>
 			</motion.div>
 
@@ -69,11 +69,10 @@ export const BioSection = () => {
 
 					{/* Bio */}
 					<p className="font-hand text-ink/80 text-xl md:text-2xl max-w-2xl leading-relaxed">
-						full-stack engineer building at{" "}
-						<span className="marker-highlight">Flipkart</span> — i obsess over
-						scalable systems, clean code, and shipping stuff that actually works.
-						when i&apos;m not at my day job, i&apos;m hacking on side projects
-						that hopefully help a few humans out there.
+						i write code at <span className="marker-highlight">Flipkart</span>,
+						mostly trying not to break production. i like clean systems and
+						small, careful ideas. on weekends i tinker with little side
+						projects — most never leave my laptop, but a couple do.
 					</p>
 
 					{/* CTAs */}
@@ -97,42 +96,6 @@ export const BioSection = () => {
 							Resume
 						</a>
 
-						{/* Hand-drawn arrow pointing to View Work — desktop only */}
-						<svg
-							aria-hidden
-							className="hidden md:block absolute -top-16 left-32 text-ink"
-							width="120"
-							height="80"
-							viewBox="0 0 120 80"
-							fill="none"
-						>
-							<path
-								d="M5 5 Q 40 10, 60 30 T 95 65"
-								stroke="currentColor"
-								strokeWidth="2.5"
-								strokeLinecap="round"
-								strokeDasharray="6 6"
-								fill="none"
-							/>
-							<path
-								d="M85 60 L 95 65 L 90 75"
-								stroke="currentColor"
-								strokeWidth="2.5"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								fill="none"
-							/>
-							<text
-								x="0"
-								y="0"
-								className="font-heading"
-								fontSize="14"
-								fill="currentColor"
-								transform="translate(-2 -2) rotate(-8)"
-							>
-								start here
-							</text>
-						</svg>
 					</div>
 
 					{/* Socials — wavy underlined links */}
@@ -197,13 +160,13 @@ export const BioSection = () => {
 						<div className="border-t-2 border-dashed border-ink/30 my-5" />
 
 						<p className="font-hand text-ink/70 text-base md:text-lg leading-relaxed">
-							always up for a chat about{" "}
+							happy to chat about{" "}
 							<span className="marker-highlight">side projects</span>,
-							developer tools, or what i&apos;m breaking this week.
+							developer tools, or whatever you&apos;re working on.
 						</p>
 					</div>
 
-					{/* Bouncing "ship it!" badge nestled into the corner */}
+					{/* Bouncing badge nestled into the corner */}
 					<motion.div
 						aria-hidden
 						className="hidden lg:block absolute -bottom-12 -right-8 animate-sketch-bounce"
@@ -212,9 +175,9 @@ export const BioSection = () => {
 							className="w-24 h-24 bg-accent border-[3px] border-ink shadow-sketch flex items-center justify-center text-paper font-heading text-xl text-center leading-tight px-2"
 							style={{ borderRadius: wobbly.lg }}
 						>
-							ship
+							still
 							<br />
-							it!
+							learning
 						</div>
 					</motion.div>
 				</motion.aside>
