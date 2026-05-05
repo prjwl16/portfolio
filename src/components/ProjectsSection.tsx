@@ -33,16 +33,38 @@ export const ProjectsSection = () => {
 						viewport={{ once: true }}
 						className="group relative bg-[#0a0a0a] hover:bg-neutral-900 transition-colors duration-300 overflow-hidden"
 					>
-						{/* Image */}
+						{/* Preview */}
 						<div className="relative h-52 overflow-hidden bg-neutral-900">
-							<Image
-								src={project.thumbnail}
-								alt={project.title}
-								fill
-								className="object-cover opacity-50 group-hover:opacity-75 group-hover:scale-105 transition-all duration-500"
-							/>
-							<div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
-							<div className="absolute top-4 left-4 text-xs text-neutral-500 font-medium">
+							{project.showLinkPreview ? (
+								<div className="w-full h-full relative">
+									<iframe
+										src={project.href}
+										title={project.title}
+										className="absolute top-0 left-0 border-0 pointer-events-none"
+										style={{
+											width: "200%",
+											height: "200%",
+											transform: "scale(0.5)",
+											transformOrigin: "top left",
+										}}
+										sandbox="allow-scripts allow-same-origin"
+										loading="lazy"
+									/>
+									{/* Gradient overlay so it blends into the card */}
+									<div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent pointer-events-none" />
+								</div>
+							) : (
+								<>
+									<Image
+										src={project.thumbnail}
+										alt={project.title}
+										fill
+										className="object-cover opacity-50 group-hover:opacity-75 group-hover:scale-105 transition-all duration-500"
+									/>
+									<div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
+								</>
+							)}
+							<div className="absolute top-4 left-4 text-xs text-neutral-500 font-medium z-10">
 								{String(index + 1).padStart(2, "0")}
 							</div>
 						</div>
