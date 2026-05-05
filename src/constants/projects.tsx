@@ -15,7 +15,7 @@ export const projects: Product[] = [
 		slug: "clusta-shop",
 		stack: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS", "Stripe"],
 		content:
-			"Clusta.shop is built around community and curation. Instead of endless scrolling, shoppers discover collections handpicked by independent sellers. It's a blend of modern design, smooth UX, and the heart of small business—crafted to make online shopping feel human again.",
+			"Clusta.shop is built around community and curation. Instead of endless scrolling, shoppers discover collections handpicked by independent sellers. It's a blend of modern design, smooth UX, and the heart of small business... crafted to make online shopping feel human again.",
 		showLinkPreview: true,
 	},
 	{
@@ -31,7 +31,7 @@ export const projects: Product[] = [
 		slug: "dear-patient",
 		stack: ["Next.js", "OpenAI", "Google Gemini", "Shadcn/UI", "PostgreSQL", "Node.js"],
 		content:
-			"Dear Patient bridges the gap between doctors and patients by making communication more personal and comforting. Whether it's a recovery note or a health reminder, the app focuses on empathy, simplicity, and trust—because care shouldn't feel automated.",
+			"Dear Patient bridges the gap between doctors and patients by making communication more personal and comforting. Whether it's a recovery note or a health reminder, the app focuses on empathy, simplicity, and trust... because care shouldn't feel automated.",
 		showLinkPreview: true,
 	},
 
@@ -49,7 +49,7 @@ export const projects: Product[] = [
 		slug: "sub2x",
 		stack: ["Next.js", "TypeScript", "Supabase", "Stripe", "PostgreSQL"],
 		content:
-			"Sub2x helps digital entrepreneurs and SaaS founders grow faster by tracking user behavior, optimizing pricing models, and automating retention strategies. It's designed with a modern dashboard and powerful insights—perfect for anyone chasing that next growth milestone.",
+			"Sub2x helps digital entrepreneurs and SaaS founders grow faster by tracking user behavior, optimizing pricing models, and automating retention strategies. It's designed with a modern dashboard and powerful insights... perfect for anyone chasing that next growth milestone.",
 		showLinkPreview: true,
 	},
 ];

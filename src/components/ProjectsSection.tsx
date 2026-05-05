@@ -33,7 +33,7 @@ export const ProjectsSection = () => {
 					</h2>
 				</div>
 				<p className="font-hand text-ink/60 text-base md:text-lg max-w-xs">
-					little corners of the internet i&apos;m proud of —
+					little corners of the internet i&apos;m proud of...
 				</p>
 			</motion.div>
 

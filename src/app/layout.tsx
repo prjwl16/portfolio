@@ -22,7 +22,7 @@ const patrick = Patrick_Hand({
 });
 
 export const metadata: Metadata = {
-	title: "Prajwal More — Software Engineer",
+	title: "Prajwal More · Software Engineer",
 	description: "Prajwal More is a software engineer at Flipkart building scalable products.",
 };
 

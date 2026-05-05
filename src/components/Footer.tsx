@@ -26,7 +26,7 @@ export const Footer = () => {
 						className="inline-block bg-postit border-2 border-ink px-3 py-1 font-hand text-sm md:text-base -rotate-2 shadow-sketch-sm"
 						style={{ borderRadius: wobbly.sm }}
 					>
-						say hi —
+						say hi...
 					</div>
 					<h3 className="font-heading text-ink text-3xl md:text-4xl leading-tight max-w-md">
 						let&apos;s build something <span className="marker-highlight">together</span>.
@@ -51,7 +51,7 @@ export const Footer = () => {
 			</div>
 
 			<div className="mt-10 flex items-center justify-between font-hand text-sm text-ink/50">
-				<span>© {year} Prajwal More — drawn with care</span>
+				<span>© {year} Prajwal More · drawn with care</span>
 				<span aria-hidden className="text-base">✎</span>
 			</div>
 		</footer>

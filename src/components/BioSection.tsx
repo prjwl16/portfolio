@@ -14,7 +14,7 @@ const socials = [
 const facts = [
 	{ Icon: MapPin, text: "based in India, writing code at Flipkart" },
 	{ Icon: Zap, text: "a few years in, still learning every day" },
-	{ Icon: Sparkles, text: "ts, next.js, node — mostly whatever the job needs" },
+	{ Icon: Sparkles, text: "ts, next.js, node... mostly whatever the job needs" },
 	{ Icon: Coffee, text: "runs on chai and a bit of curiosity" },
 ];
 
@@ -72,7 +72,7 @@ export const BioSection = () => {
 						i write code at <span className="marker-highlight">Flipkart</span>,
 						mostly trying not to break production. i like clean systems and
 						small, careful ideas. on weekends i tinker with little side
-						projects — most never leave my laptop, but a couple do.
+						projects... most never leave my laptop, but a couple do.
 					</p>
 
 					{/* CTAs */}
@@ -137,7 +137,7 @@ export const BioSection = () => {
 							a few things
 						</h2>
 						<p className="font-hand text-ink/60 text-sm md:text-base mb-5">
-							about me &mdash;
+							about me...
 						</p>
 
 						<ul className="space-y-3.5">
