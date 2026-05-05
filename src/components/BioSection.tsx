@@ -1,199 +1,84 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Heading } from "./Heading";
-import { Paragraph } from "./Paragraph";
-import Image from "next/image";
-import { VerticalImageCarousel } from "./VerticalImageCarousel";
-import Link from "next/link";
 
-interface BioSectionProps {
-	onShowProjects: () => void;
-}
+const socials = [
+	{ label: "LinkedIn", href: "https://linkedin.com/in/moreprajwal" },
+	{ label: "GitHub", href: "https://github.com/prjwl16" },
+	{ label: "X", href: "https://x.com/prjwl_16" },
+	{ label: "Instagram", href: "https://www.instagram.com/prajwal._.16/" },
+];
 
-export const BioSection = ({ onShowProjects }: BioSectionProps) => {
+export const BioSection = () => {
 	return (
-		<div className="relative h-screen w-full overflow-x-hidden overflow-y-hidden">
-			{/* Background with vertical image carousel */}
-			<div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 border-black">
-				{/* Vertical Image Carousel */}
-				<VerticalImageCarousel />
-
-				{/* Subtle floating shapes for depth */}
-				<motion.div
-					animate={{
-						rotate: 360,
-						scale: [1, 1.05, 1],
-					}}
-					transition={{
-						rotate: { duration: 30, repeat: Infinity, ease: "linear" },
-						scale: { duration: 6, repeat: Infinity, ease: "easeInOut" },
-					}}
-					className="absolute top-32 left-20 w-24 h-24 bg-gradient-to-r from-neutral-200/10 to-neutral-300/10 rounded-full blur-xl"
-				/>
-
-				{/* Elegant overlay for text readability */}
-				<div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/75" />
-			</div>
-
-			{/* Content */}
-			<div className="relative z-10 h-full overflow-y-auto pb-20">
-				<div className="max-w-6xl mx-auto w-full px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
-					{/* Main Layout */}
-					<div className="grid grid-cols-12 gap-4 sm:gap-6 md:gap-8 items-center">
-						{/* Left: Content */}
-						<motion.div
-							initial={{ x: -30, opacity: 0 }}
-							animate={{ x: 0, opacity: 1 }}
-							transition={{ duration: 1, ease: "easeOut" }}
-							className="col-span-12 sm:col-span-11 md:col-span-10 lg:col-span-9 xl:col-span-8 space-y-8 sm:space-y-10 md:space-y-12"
-						>
-							{/* Intro */}
-							<div className="space-y-6">
-								<div className="space-y-2">
-									<div className="text-sm font-medium text-neutral-400 tracking-[0.2em] uppercase">
-										Software Engineer
-									</div>
-									<Heading className="text-xl sm:text-5xl md:text-6xl font-thin text-neutral-800 tracking-wide leading-none">
-										Prajwal
-									</Heading>
-									<div className="text-lg text-neutral-500 font-light">
-										Currently at Flipkart, previously breaking things at startups
-									</div>
-								</div>
-							</div>
-
-							{/* Philosophy */}
-							<div className="space-y-8">
-								<div className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
-									<Paragraph className="text-lg sm:text-xl leading-relaxed text-neutral-600 font-light">
-										<span className="text-neutral-800">Years</span> of turning coffee into code, bugs into features, and
-										&#34;it works on my machine&#34; into actual solutions.
-										<br />
-									</Paragraph>
-								</div>
-
-								<div className="border-l border-neutral-200 pl-6 max-w-md">
-									<Paragraph className="text-base text-neutral-500 italic font-light leading-relaxed">
-										Currently building something at the intersection of tech and human habits. It&#39;s early, messy,
-										and probably over-engineered,
-										<span className="text-neutral-800"> exactly how I like it.</span>
-										<br />
-										<Link href="https://dearpatient.in" className="">
-											Check it out here.
-											<span className="text-orange-500 font-medium"> Dear Patient</span>
-										</Link>
-									</Paragraph>
-								</div>
-							</div>
-
-							{/* Skills Grid */}
-							<div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-lg">
-								<div className="space-y-2">
-									{/* <div className="text-xs font-medium text-neutral-400 tracking-wider uppercase">
-                    Specialty
-                  </div> */}
-									<div className="text-base text-neutral-700 font-medium">
-										Products that make life easier.
-										<br />
-										<span className="text-neutral-500 font-light">(and occasionally better Fridays)</span>
-									</div>
-								</div>
-								<div className="space-y-2">
-									{/* <div className="text-xs font-medium text-neutral-400 tracking-wider uppercase">
-                    Approach
-                  </div> */}
-									<div className="text-base text-neutral-700 font-medium">
-										Language agnostic
-										<br />
-										<span className="text-neutral-500 font-light">(whatever helps ship faster and cleaner)</span>
-									</div>
-								</div>
-							</div>
-
-							{/* Actions */}
-							<div className="space-y-6">
-								<div className="flex justify-center sm:justify-start gap-4 sm:gap-6 md:gap-8 text-sm hover:text-neutral-700 transition-colors font-medium tracking-wide">
-									<a
-										href="https://linkedin.com/in/moreprajwal"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="text-neutral-400 hover:text-neutral-700 transition-colors font-medium tracking-wide"
-									>
-										LinkedIn
-									</a>
-									<a
-										href="https://github.com/prjwl16"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="text-neutral-400 hover:text-neutral-700 transition-colors font-medium tracking-wide"
-									>
-										GitHub
-									</a>
-									<a
-										href="https://x.com/prjwl_16"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="text-neutral-400 hover:text-neutral-700 transition-colors font-medium tracking-wide"
-									>
-										X
-									</a>
-									<a
-										href="https://www.instagram.com/prajwal._.16/"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="text-neutral-400 hover:text-neutral-700 transition-colors font-medium tracking-wide"
-									>
-										Instagram
-									</a>
-								</div>
-
-								<div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-									<motion.button
-										onClick={onShowProjects}
-										whileHover={{ y: -1 }}
-										whileTap={{ y: 0 }}
-										className="px-6 sm:px-8 py-3 sm:py-4 bg-neutral-900 text-white text-sm font-medium tracking-wide hover:bg-neutral-800 transition-colors text-center"
-									>
-										View Work
-									</motion.button>
-
-									<a
-										href="https://drive.google.com/file/d/1aWmywIm8Pi2TJhQhEATOgUCyh9V622NE/view?usp=drive_link"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="px-6 sm:px-8 py-3 sm:py-4 border border-neutral-200 text-neutral-700 text-sm font-medium tracking-wide hover:bg-neutral-50 transition-colors text-center"
-									>
-										Resume
-									</a>
-								</div>
-							</div>
-						</motion.div>
-
-						{/* Right: Small Image */}
-						<motion.div
-							initial={{ x: 20, opacity: 0 }}
-							animate={{ x: 0, opacity: 1 }}
-							transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-							className="col-span-12 lg:col-span-3 flex justify-center lg:justify-end"
-						>
-							{/*<div className="relative">*/}
-							{/*  <div className="absolute -inset-2 bg-gradient-to-br from-neutral-100 to-neutral-200 blur-xl opacity-20" />*/}
-							{/*  <div className="relative w-32 h-40 overflow-hidden bg-neutral-100">*/}
-							{/*    <Image*/}
-							{/*      src="/me.png"*/}
-							{/*      alt="Prajwal"*/}
-							{/*      width={128}*/}
-							{/*      height={160}*/}
-							{/*      className="object-cover object-top w-full h-full"*/}
-							{/*      style={{ objectPosition: '50% 20%' }}*/}
-							{/*    />*/}
-							{/*  </div>*/}
-							{/*</div>*/}
-						</motion.div>
-					</div>
+		<section className="min-h-screen flex flex-col justify-center px-6 sm:px-12 md:px-20 lg:px-28 max-w-7xl mx-auto">
+			<motion.div
+				initial={{ opacity: 0, y: 24 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.7, ease: "easeOut" }}
+				className="space-y-10"
+			>
+				{/* Name & Role */}
+				<div className="space-y-4">
+					<p className="text-xs font-medium text-neutral-500 tracking-[0.3em] uppercase">
+						Software Engineer
+					</p>
+					<h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extralight text-white tracking-tight leading-none">
+						Prajwal More
+					</h1>
+					<p className="text-base sm:text-lg text-neutral-400 max-w-lg leading-relaxed font-light">
+						Building at Flipkart. Full-stack engineer with a focus on scalable systems, clean code, and
+						shipping fast.
+					</p>
 				</div>
-			</div>
-		</div>
+
+				{/* Social Links */}
+				<div className="flex items-center gap-8">
+					{socials.map((s) => (
+						<a
+							key={s.label}
+							href={s.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-sm text-neutral-500 hover:text-white transition-colors duration-200"
+						>
+							{s.label}
+						</a>
+					))}
+				</div>
+
+				{/* CTAs */}
+				<div className="flex flex-wrap gap-3">
+					<a
+						href="#projects"
+						className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black text-sm font-medium hover:bg-neutral-200 transition-colors duration-200"
+					>
+						View Work
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="14"
+							height="14"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							strokeWidth="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+						>
+							<path d="M5 12h14" />
+							<path d="M13 6l6 6-6 6" />
+						</svg>
+					</a>
+					<a
+						href="https://drive.google.com/file/d/1aWmywIm8Pi2TJhQhEATOgUCyh9V622NE/view?usp=drive_link"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-flex items-center px-6 py-3 border border-neutral-700 text-neutral-300 text-sm font-medium hover:border-neutral-500 hover:text-white transition-colors duration-200"
+					>
+						Resume
+					</a>
+				</div>
+			</motion.div>
+		</section>
 	);
 };
