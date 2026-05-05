@@ -13,21 +13,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-	title: "Prajwal More - Software Engineer",
-	description: "Prajwal More's personal website",
+	title: "Prajwal More — Software Engineer",
+	description: "Prajwal More is a software engineer at Flipkart building scalable products.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<body className={twMerge(inter.className, "flex antialiased overflow-x-hidden overflow-y-hidden")}>
+			<body className={twMerge(inter.className, "antialiased bg-[#0a0a0a] text-white")}>
 				<Analytics />
 				<SpeedInsights />
-				{/*<Sidebar />*/}
-				<div className="flex-1 overflow-y-auto overflow-x-hidden">
-					{children}
-					<Footer />
-				</div>
+				{children}
+				<Footer />
 			</body>
 		</html>
 	);
