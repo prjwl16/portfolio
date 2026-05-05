@@ -1,23 +1,6 @@
 import { Product } from "@/types/products";
 
 export const projects: Product[] = [
-	// 🛍️ New project 3
-	{
-		title: "Clusta.shop",
-		description:
-			"A community-driven eCommerce platform where small brands and indie creators come together to sell unique, high-quality products in one elegant space.",
-		thumbnail: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=600&fit=crop&crop=center",
-		images: [
-			"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=600&fit=crop&crop=center",
-			"https://images.unsplash.com/photo-1561715276-a2d4bcb9c16e?w=800&h=600&fit=crop&crop=center",
-		],
-		href: "https://clusta.shop/",
-		slug: "clusta-shop",
-		stack: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS", "Stripe"],
-		content:
-			"Clusta.shop is built around community and curation. Instead of endless scrolling, shoppers discover collections handpicked by independent sellers. It's a blend of modern design, smooth UX, and the heart of small business... crafted to make online shopping feel human again.",
-		showLinkPreview: true,
-	},
 	{
 		title: "Dear Patient",
 		description:
@@ -32,6 +15,22 @@ export const projects: Product[] = [
 		stack: ["Next.js", "OpenAI", "Google Gemini", "Shadcn/UI", "PostgreSQL", "Node.js"],
 		content:
 			"Dear Patient bridges the gap between doctors and patients by making communication more personal and comforting. Whether it's a recovery note or a health reminder, the app focuses on empathy, simplicity, and trust... because care shouldn't feel automated.",
+		showLinkPreview: true,
+	},
+	{
+		title: "Clusta.shop",
+		description:
+			"A community-driven eCommerce platform where small brands and indie creators come together to sell unique, high-quality products in one elegant space.",
+		thumbnail: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=600&fit=crop&crop=center",
+		images: [
+			"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=600&fit=crop&crop=center",
+			"https://images.unsplash.com/photo-1561715276-a2d4bcb9c16e?w=800&h=600&fit=crop&crop=center",
+		],
+		href: "https://clusta.shop/",
+		slug: "clusta-shop",
+		stack: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS", "Stripe"],
+		content:
+			"Clusta.shop is built around community and curation. Instead of endless scrolling, shoppers discover collections handpicked by independent sellers. It's a blend of modern design, smooth UX, and the heart of small business... crafted to make online shopping feel human again.",
 		showLinkPreview: true,
 	},
 
