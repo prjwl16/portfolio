@@ -8,8 +8,22 @@
   }
 
   body {
-    background-color: #0a0a0a;
-    color: #ededed;
+    background-color: #fdfbf7;
+    color: #2d2d2d;
+    background-image: radial-gradient(#e5e0d8 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
+    font-family: var(--font-patrick), "Patrick Hand", cursive;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-kalam), "Kalam", cursive;
+    font-weight: 700;
+  }
+
+  ::selection {
+    background-color: #ff4d4d;
+    color: #fdfbf7;
   }
 }
 
@@ -28,68 +42,46 @@
     -webkit-line-clamp: 2;
   }
 
-  .perspective-1000 {
-    perspective: 1000px;
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 
-  .preserve-3d {
-    transform-style: preserve-3d;
+  .perspective-1000 { perspective: 1000px; }
+  .preserve-3d { transform-style: preserve-3d; }
+  .backface-hidden { backface-visibility: hidden; }
+
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+  /* Wavy underline for nav and footer links — drawn by hand, not generated. */
+  .wavy-underline {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 6' preserveAspectRatio='none'><path d='M0 3 Q 7.5 0, 15 3 T 30 3 T 45 3 T 60 3' fill='none' stroke='%232d2d2d' stroke-width='1.5' stroke-linecap='round'/></svg>");
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-size: 60px 6px;
+    padding-bottom: 8px;
   }
 
-  .backface-hidden {
-    backface-visibility: hidden;
+  .wavy-underline-accent {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 6' preserveAspectRatio='none'><path d='M0 3 Q 7.5 0, 15 3 T 30 3 T 45 3 T 60 3' fill='none' stroke='%23ff4d4d' stroke-width='2' stroke-linecap='round'/></svg>");
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-size: 60px 6px;
+    padding-bottom: 8px;
   }
 
-  .cursor-tech {
-    cursor: help;
+  /* Inline highlight — like a marker swipe. */
+  .marker-highlight {
+    background: linear-gradient(180deg, transparent 55%, #fff9c4 55%, #fff9c4 92%, transparent 92%);
+    padding: 0 2px;
   }
 
-  .cursor-tech:hover {
-    cursor: help;
-  }
-
-  .scrollbar-hide {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-  }
-
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
-  }
-
-  /* Responsive carousel spacing */
-  @media (max-width: 640px) {
-    .carousel-spacing {
-      --spacing: 70px;
-    }
-  }
-
-  @media (min-width: 641px) and (max-width: 768px) {
-    .carousel-spacing {
-      --spacing: 85px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .carousel-spacing {
-      --spacing: 100px;
-    }
-  }
-
-  /* Directional shadows for project cards */
-  .shadow-b-lg {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  }
-
-  .shadow-t-lg {
-    box-shadow: 0 -10px 15px -3px rgba(0, 0, 0, 0.1), 0 -4px 6px -2px rgba(0, 0, 0, 0.05);
-  }
-
-  .shadow-l-lg {
-    box-shadow: -10px 0 15px -3px rgba(0, 0, 0, 0.1), -4px 0 6px -2px rgba(0, 0, 0, 0.05);
-  }
-
-  .shadow-r-lg {
-    box-shadow: 10px 0 15px -3px rgba(0, 0, 0, 0.1), 4px 0 6px -2px rgba(0, 0, 0, 0.05);
+  .marker-highlight-accent {
+    background: linear-gradient(180deg, transparent 55%, #ff4d4d 55%, #ff4d4d 92%, transparent 92%);
+    color: #fdfbf7;
+    padding: 0 4px;
   }
 }
