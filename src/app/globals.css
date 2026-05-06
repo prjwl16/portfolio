@@ -73,15 +73,34 @@
     padding-bottom: 8px;
   }
 
-  /* Inline highlight — like a marker swipe. */
+  /* Inline highlight — like a marker swipe under the text.
+     Anchored in em units from the bottom so it scales with any font size
+     without ever covering the whole glyph. */
   .marker-highlight {
-    background: linear-gradient(180deg, transparent 55%, #fff9c4 55%, #fff9c4 92%, transparent 92%);
-    padding: 0 2px;
+    background: linear-gradient(
+      180deg,
+      transparent 0,
+      transparent calc(100% - 0.4em),
+      #fff9c4 calc(100% - 0.4em),
+      #fff9c4 calc(100% - 0.05em),
+      transparent calc(100% - 0.05em)
+    );
+    padding: 0 0.15em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 
   .marker-highlight-accent {
-    background: linear-gradient(180deg, transparent 55%, #ff4d4d 55%, #ff4d4d 92%, transparent 92%);
-    color: #fdfbf7;
-    padding: 0 4px;
+    background: linear-gradient(
+      180deg,
+      transparent 0,
+      transparent calc(100% - 0.45em),
+      #ff4d4d calc(100% - 0.45em),
+      #ff4d4d calc(100% - 0.05em),
+      transparent calc(100% - 0.05em)
+    );
+    padding: 0 0.2em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 }
