@@ -10,4 +10,6 @@ export type Product = {
   stack?: string[];
   content?: React.ReactNode | string;
   showLinkPreview?: boolean;
+  /** Short factual label shown above the longer description. */
+  note?: string;
 };

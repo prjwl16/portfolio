@@ -1,20 +1,23 @@
-import {Heading} from "@/components/Heading";
-import {Paragraph} from "@/components/Paragraph";
-import {Highlight} from "@/components/Highlight";
-import {WorkHistory} from "@/components/WorkHistory";
-import {Container} from "@/components/Container";
+import type { Metadata } from "next";
+import { Container } from "@/components/site/Container";
+import { PageHeader } from "@/components/site/PageHeader";
+import { WorkList } from "@/components/site/WorkList";
 
-export default function Work() {
-    return (
-        <Container>
-            <span className="text-4xl">💼</span>
-            <Heading className="font-black">Work History</Heading>
-            <Paragraph className="max-w-xl mt-4">
-                I&apos;m a full-stack developer that loves{" "}
-                <Highlight>building products</Highlight> and web apps that can impact
-                millions of lives
-            </Paragraph>
-            <WorkHistory/>
-        </Container>
-    )
+export const metadata: Metadata = {
+	title: "Work",
+	description:
+		"Work history for Prajwal More: Senior Software Engineer at Dezy, supervising engineer at Dhyay, formerly SDE-1 at Flipkart (Cleartrip) and full-stack developer at Trips For Business.",
+};
+
+export default function WorkPage() {
+	return (
+		<Container className="py-12 sm:py-16 md:py-20">
+			<PageHeader
+				index="02 — Work"
+				title="Work"
+				lede="I'm a full-stack developer that loves building products and web apps that can impact millions of lives."
+			/>
+			<WorkList detailed />
+		</Container>
+	);
 }

@@ -12,6 +12,7 @@ export const projects: Product[] = [
 		],
 		href: "https://dearpatient.in/",
 		slug: "dear-patient",
+		note: "WhatsApp-first AI healthcare assistant",
 		stack: ["Next.js", "OpenAI", "Google Gemini", "Shadcn/UI", "PostgreSQL", "Node.js"],
 		content:
 			"Dear Patient bridges the gap between doctors and patients by making communication more personal and comforting. Whether it's a recovery note or a health reminder, the app focuses on empathy, simplicity, and trust... because care shouldn't feel automated.",
