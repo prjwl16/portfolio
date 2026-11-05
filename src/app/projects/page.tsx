@@ -5,13 +5,13 @@ import { ProjectList } from "@/components/site/ProjectList";
 
 export const metadata: Metadata = {
 	title: "Projects",
-	description: "Side projects by Prajwal More, including Dear Patient, Clusta.shop, and Sub2x.",
+	description: "Projects by Prajwal More, including Dezy Assist, Dear Patient, Clusta.shop, and Sub2x.",
 };
 
 export default function ProjectsPage() {
 	return (
 		<Container className="py-12 sm:py-16">
-			<PageHeader title="Projects" lede="Little corners of the internet I'm proud of." />
+			<PageHeader title="Projects" lede="Dezy Assist, Dear Patient, and a few other things I've shipped." />
 			<ProjectList detailed />
 		</Container>
 	);

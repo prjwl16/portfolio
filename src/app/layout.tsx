@@ -49,6 +49,10 @@ const jsonLd = {
 	name: profile.name,
 	jobTitle: "Senior Software Engineer",
 	email: profile.email,
+	alumniOf: {
+		"@type": "EducationalOrganization",
+		name: "Pune University",
+	},
 	url: profile.url,
 	homeLocation: {
 		"@type": "Place",

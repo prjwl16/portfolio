@@ -5,7 +5,8 @@ import { Container } from "@/components/site/Container";
 import { ProjectList } from "@/components/site/ProjectList";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { WorkList } from "@/components/site/WorkList";
-import { interests, learning, profile, socials, stack } from "@/constants/site";
+import { SkillGroups } from "@/components/site/SkillGroups";
+import { learning, profile, seeking, socials } from "@/constants/site";
 
 export default function Home() {
 	return (
@@ -22,46 +23,39 @@ export default function Home() {
 				/>
 				<div>
 					<h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{profile.name}</h1>
-					<p className="mt-2 text-lg text-soft">Software engineer in {profile.location}</p>
+					<p className="mt-2 text-lg text-soft">Backend and AI engineer in {profile.location}</p>
 					<p className="mt-1 text-muted">Senior Software Engineer at Dezy</p>
 				</div>
 			</div>
 
 			<div className="mt-10 space-y-4 text-[1.05rem] leading-relaxed">
 				<p>
-					I like software that feels thoughtful — the kind that&apos;s clean, fast, and doesn&apos;t make users suffer. I&apos;m into systems, structure,
-					and the little design choices most people ignore.
+					I&apos;m a backend and AI engineer with 4+ years across Dezy, Flipkart, and Cleartrip. I work on AI agents and distributed systems. At Dezy I
+					own engineering for the core operations platform, after checkout at Flipkart and Cleartrip for Work.
 				</p>
+				<p className="text-muted">I like software that feels thoughtful. Runs on chai and a bit of curiosity.</p>
 				<p>
-					Until June 2026 I was an SDE-1 at Flipkart, on checkout. Before that I was an SDE-1 at Cleartrip, on Cleartrip for Work. About four years
-					in, still learning every day.
-				</p>
-				<p>
-					I like clean systems and small, careful ideas. On weekends I tinker with side projects. Most never leave my laptop, but a couple do. The one
-					I keep coming back to is Dear Patient, a WhatsApp-first AI nurse.
-				</p>
-				<p className="text-muted">Runs on chai and a bit of curiosity.</p>
-				<p>
+					Open to {seeking.join(", ")} roles.{" "}
 					<Link href="/about" className="link">
 						More about me
 					</Link>
 				</p>
 			</div>
 
-			<section aria-label="Focus and tools" className="mt-10 space-y-3 text-soft">
-				<p>
-					<span className="font-medium text-ink">Focus. </span>
-					{interests.join(", ")}.
-				</p>
-				<p>
-					<span className="font-medium text-ink">Learning. </span>
-					{learning.join(" and ")}.
-				</p>
-				<p>
-					<span className="font-medium text-ink">Stack. </span>
-					{stack.join(", ")}.
-				</p>
-			</section>
+			<ul className="mt-8 grid gap-6 border-y border-line py-6 sm:grid-cols-3">
+				<li>
+					<p className="text-2xl font-semibold tracking-tight">1,400+</p>
+					<p className="mt-1 text-sm text-muted">Pull requests at Dezy</p>
+				</li>
+				<li>
+					<p className="text-2xl font-semibold tracking-tight">487 → 64 ms</p>
+					<p className="mt-1 text-sm text-muted">Checkout API latency at Flipkart</p>
+				</li>
+				<li>
+					<p className="text-2xl font-semibold tracking-tight">Zero downtime</p>
+					<p className="mt-1 text-sm text-muted">Platform migration at Dezy</p>
+				</li>
+			</ul>
 
 			<section aria-labelledby="work-heading" className="mt-16 scroll-mt-20">
 				<SectionHeading id="work-heading" title="Work" href="/work" action="All work" />
@@ -71,6 +65,15 @@ export default function Home() {
 			<section aria-labelledby="projects-heading" className="mt-16 scroll-mt-20">
 				<SectionHeading id="projects-heading" title="Projects" href="/projects" action="All projects" />
 				<ProjectList />
+			</section>
+
+			<section aria-labelledby="skills-heading" className="mt-16 scroll-mt-20">
+				<SectionHeading id="skills-heading" title="Skills" href="/about" action="About" />
+				<SkillGroups />
+				<p className="mt-4 text-soft">
+					<span className="font-medium text-ink">Learning. </span>
+					{learning.join(" and ")}.
+				</p>
 			</section>
 
 			<section aria-labelledby="notes-heading" className="mt-16 scroll-mt-20">

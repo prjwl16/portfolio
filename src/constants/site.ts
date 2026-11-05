@@ -2,12 +2,12 @@ export const profile = {
 	name: "Prajwal More",
 	role: "Software engineer",
 	location: "Bengaluru",
-	email: "hello@prajwal.dev",
+	email: "prajumore76@gmail.com",
 	url: "https://prajwal.wtf",
 	resumeHref:
 		"https://drive.google.com/file/d/1aWmywIm8Pi2TJhQhEATOgUCyh9V622NE/view?usp=drive_link",
 	description:
-		"Prajwal More is a software engineer in Bengaluru. Senior Software Engineer at Dezy, and formerly an SDE-1 at Flipkart and at Cleartrip.",
+		"Prajwal More is a backend and AI engineer in Bengaluru. Senior Software Engineer at Dezy, with 4+ years across Dezy, Flipkart, and Cleartrip.",
 };
 
 export const nav = [
@@ -46,6 +46,22 @@ export const stack = [
 ] as const;
 
 export const learning = ["Go", "Rust"] as const;
+
+export const seeking = ["Senior Backend", "AI/LLM Engineer", "AI Infra"] as const;
+
+export const education = {
+	degree: "BCA",
+	school: "Pune University",
+	cgpa: "7.8",
+} as const;
+
+export const skillGroups = [
+	{ label: "Languages", items: ["Java", "TypeScript", "JavaScript"] },
+	{ label: "Backend", items: ["Node.js", "NestJS", "Express", "Vert.x", "Microservices", "REST", "RPC"] },
+	{ label: "AI", items: ["AI agents", "Text-to-SQL", "Prompt evals", "LangGraph", "LangChain", "LangSmith", "RAG", "Tool calling"] },
+	{ label: "Data", items: ["PostgreSQL", "MongoDB", "DynamoDB", "Redis", "ClickHouse", "MySQL", "CDC"] },
+	{ label: "Infra", items: ["AWS CDK", "ECS Fargate", "EC2", "RDS", "ElastiCache", "Docker", "CI/CD", "Sentry"] },
+] as const;
 
 export const interests = [
 	"Distributed systems",

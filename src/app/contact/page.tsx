@@ -15,7 +15,7 @@ export default function ContactPage() {
 
 			<h2 className="text-sm font-medium text-muted">Email</h2>
 			<p className="mt-2">
-				<a className="link text-2xl font-medium tracking-tight" href={`mailto:${profile.email}`}>
+				<a className="link break-words text-xl font-medium tracking-tight sm:text-2xl" href={`mailto:${profile.email}`}>
 					{profile.email}
 				</a>
 			</p>

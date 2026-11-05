@@ -2,6 +2,18 @@ import { Product } from "@/types/products";
 
 export const projects: Product[] = [
 	{
+		title: "Dezy Assist",
+		description: "A text-to-SQL agent at Dezy. Patient data stays hidden.",
+		thumbnail: "https://images.unsplash.com/photo-1580281657521-6a42b0a6b2c3?w=800&h=600&fit=crop&crop=center",
+		images: [
+			"https://images.unsplash.com/photo-1580281657521-6a42b0a6b2c3?w=800&h=600&fit=crop&crop=center",
+		],
+		slug: "dezy-assist",
+		note: "At Dezy",
+		highlights: ["Versioned prompts with evals.", "Sentry tracing.", "Daily WhatsApp follow-ups."],
+		showLinkPreview: false,
+	},
+	{
 		title: "Dear Patient",
 		description: "A WhatsApp-first AI nurse for clinics.",
 		thumbnail: "https://images.unsplash.com/photo-1580281657521-6a42b0a6b2c3?w=800&h=600&fit=crop&crop=center",
@@ -11,10 +23,13 @@ export const projects: Product[] = [
 		],
 		href: "https://dearpatient.in/",
 		slug: "dear-patient",
-		note: "WhatsApp-first AI nurse",
-		stack: ["LangGraph", "AWS", "Docker"],
-		content:
-			"It extracts prescriptions and documents, and uses LangGraph agents with tool calling and patient context. The clinic backend is multi-tenant, running in production on AWS EC2 and Docker.",
+		stack: ["LangGraph", "AWS EC2", "Docker"],
+		highlights: [
+			"Prescription and document extraction.",
+			"LangGraph agents with tool calling and patient context.",
+			"Multi-tenant clinic backend.",
+			"In production on AWS EC2 and Docker.",
+		],
 		showLinkPreview: true,
 	},
 	{

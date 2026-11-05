@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/site/Container";
 import { PageHeader } from "@/components/site/PageHeader";
-import { interests, learning, profile, socials, stack } from "@/constants/site";
+import { SkillGroups } from "@/components/site/SkillGroups";
+import { education, interests, learning, profile, seeking, socials } from "@/constants/site";
 
 export const metadata: Metadata = {
 	title: "About",
 	description:
-		"About Prajwal More, a software engineer in Bengaluru. Senior Software Engineer at Dezy, previously an SDE-1 at Flipkart and at Cleartrip.",
+		"About Prajwal More, a backend and AI engineer in Bengaluru. Senior Software Engineer at Dezy, with 4+ years across Dezy, Flipkart, and Cleartrip.",
 };
 
 export default function AboutPage() {
@@ -20,11 +21,13 @@ export default function AboutPage() {
 
 			<div className="space-y-4 text-[1.05rem] leading-relaxed">
 				<p>
-					I&apos;m a software engineer with about four years of experience, based in {profile.location}. Since July 2026 I&apos;ve been a Senior Software
-					Engineer at Dezy, a dental healthtech company, where I own engineering for the core operations platform.
+					I&apos;m a backend and AI engineer with 4+ years across Dezy, Flipkart, and Cleartrip, based in {profile.location}. I work on AI agents and
+					distributed systems.
 				</p>
 				<p>
-					Until June 2026 I was an SDE-1 at Flipkart, on checkout. Before that I was an SDE-1 at Cleartrip, on Cleartrip for Work, from February 2023.
+					Since July 2026 I&apos;ve been a Senior Software Engineer at Dezy, a dental healthtech company, and I own engineering for the core operations
+					platform. Until June 2026 I was an SDE-1 at Flipkart, on checkout. Before that, from February 2023, I was an SDE-1 at Cleartrip, on Cleartrip
+					for Work.
 				</p>
 				<p>
 					I like clean systems and small, careful ideas. On weekends I tinker with side projects. Most never leave my laptop, but a couple do. Runs on
@@ -50,9 +53,24 @@ export default function AboutPage() {
 				</p>
 			</div>
 
-			<h2 className="mt-14 text-xl font-semibold tracking-tight">Stack</h2>
+			<h2 className="mt-14 text-xl font-semibold tracking-tight">Open to</h2>
+			<ul className="mt-3 space-y-2 text-soft">
+				{seeking.map((role) => (
+					<li key={role}>{role}</li>
+				))}
+			</ul>
+
+			<h2 className="mt-14 text-xl font-semibold tracking-tight">Skills</h2>
+			<SkillGroups />
+			<p className="mt-4 text-soft">
+				<span className="font-medium text-ink">Learning. </span>
+				{learning.join(" and ")}.
+			</p>
+
+			<h2 className="mt-14 text-xl font-semibold tracking-tight">Education</h2>
 			<p className="mt-3 text-soft">
-				Day to day: {stack.join(", ")}. Learning {learning.join(" and ")}.
+				{education.degree}, {education.school}
+				<span className="text-muted"> · {education.cgpa} CGPA</span>
 			</p>
 
 			<h2 className="mt-14 text-xl font-semibold tracking-tight">Interests</h2>
