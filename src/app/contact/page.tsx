@@ -10,54 +10,45 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
 	return (
-		<Container className="py-12 sm:py-16 md:py-20">
-			<PageHeader
-				index="05 — Contact"
-				title="Contact"
-				lede="Happy to chat about side projects, developer tools, or whatever you're working on."
-			/>
+		<Container className="py-12 sm:py-16">
+			<PageHeader title="Contact" lede="Happy to chat about side projects, developer tools, or whatever you're working on." />
 
-			<div className="grid gap-12 md:grid-cols-[11.5rem_minmax(0,1fr)] md:gap-8">
-				<div className="hidden md:block" />
-				<div>
-					<h2 className="kicker">Email</h2>
-					<p className="mt-3">
-						<a className="link font-serif text-3xl italic tracking-tight sm:text-5xl" href={`mailto:${profile.email}`}>
-							{profile.email}
-						</a>
-					</p>
+			<h2 className="text-sm font-medium text-muted">Email</h2>
+			<p className="mt-2">
+				<a className="link text-2xl font-medium tracking-tight" href={`mailto:${profile.email}`}>
+					{profile.email}
+				</a>
+			</p>
 
-					<h2 className="kicker mt-12">Resume</h2>
-					<p className="mt-3">
-						<a className="link" href={profile.resumeHref} target="_blank" rel="noopener noreferrer">
-							View resume
+			<h2 className="mt-10 text-sm font-medium text-muted">Resume</h2>
+			<p className="mt-2">
+				<a className="link" href={profile.resumeHref} target="_blank" rel="noopener noreferrer">
+					View resume
+					<span className="sr-only"> (opens in a new tab)</span>
+				</a>
+			</p>
+
+			<h2 className="mt-10 text-sm font-medium text-muted">Elsewhere</h2>
+			<ul className="mt-2 divide-y divide-line border-y border-line">
+				{socials.map((item) => (
+					<li key={item.href}>
+						<a
+							className="flex items-center justify-between py-3 hover:text-soft"
+							href={item.href}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<span>{item.label}</span>
+							<span aria-hidden className="text-muted">
+								↗
+							</span>
 							<span className="sr-only"> (opens in a new tab)</span>
 						</a>
-					</p>
+					</li>
+				))}
+			</ul>
 
-					<h2 className="kicker mt-12">Elsewhere</h2>
-					<ul className="mt-4 border-t border-line">
-						{socials.map((item) => (
-							<li key={item.href} className="border-b border-line">
-								<a
-									className="flex items-baseline justify-between gap-4 py-4 text-lg hover:text-accent"
-									href={item.href}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<span>{item.label}</span>
-									<span aria-hidden className="font-mono text-[0.8125rem] text-muted">
-										↗
-									</span>
-									<span className="sr-only"> (opens in a new tab)</span>
-								</a>
-							</li>
-						))}
-					</ul>
-
-					<p className="mt-10 text-soft">{profile.location}</p>
-				</div>
-			</div>
+			<p className="mt-8 text-muted">{profile.location}</p>
 		</Container>
 	);
 }

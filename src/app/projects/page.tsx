@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
 	return (
-		<Container className="py-12 sm:py-16 md:py-20">
-			<PageHeader index="03 — Projects" title="Projects" lede="Little corners of the internet I'm proud of." />
+		<Container className="py-12 sm:py-16">
+			<PageHeader title="Projects" lede="Little corners of the internet I'm proud of." />
 			<ProjectList detailed />
 		</Container>
 	);

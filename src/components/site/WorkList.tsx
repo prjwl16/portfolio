@@ -4,29 +4,27 @@ export function WorkList({ detailed = false, limit }: { detailed?: boolean; limi
 	const items = typeof limit === "number" ? timeline.slice(0, limit) : timeline;
 
 	return (
-		<ol className="border-t border-line">
+		<ol>
 			{items.map((item) => (
-				<li key={`${item.company}-${item.date}`} className="grid gap-2 border-b border-line py-7 md:grid-cols-[11.5rem_minmax(0,1fr)] md:gap-8 md:py-8">
-					<p className="font-mono text-[0.8125rem] tabular-nums text-muted md:pt-2">
-						{item.dateTime ? <time dateTime={item.dateTime}>{item.date}</time> : item.date}
-					</p>
-					<div>
-						<h3 className="font-serif text-[1.7rem] tracking-tight">{item.company}</h3>
-						<p className="mt-1 text-soft">{item.title}</p>
-						{item.description ? <p className="measure mt-3 text-soft">{item.description}</p> : null}
-						{detailed && item.responsibilities.length > 0 ? (
-							<ul className="measure mt-4 space-y-2.5">
-								{item.responsibilities.map((responsibility) => (
-									<li key={responsibility} className="grid grid-cols-[0.9rem_minmax(0,1fr)] gap-2 text-soft">
-										<span aria-hidden className="text-accent">
-											–
-										</span>
-										<span>{responsibility}</span>
-									</li>
-								))}
-							</ul>
-						) : null}
+				<li key={`${item.company}-${item.date}`} className="border-b border-line py-5">
+					<div className="flex items-baseline justify-between gap-6">
+						<h3 className="font-medium">{item.company}</h3>
+						<p className="shrink-0 text-sm text-muted">
+							{item.dateTime ? <time dateTime={item.dateTime}>{item.date}</time> : item.date}
+						</p>
 					</div>
+					<p className="mt-0.5 text-sm text-muted">{item.title}</p>
+					{item.description ? <p className="mt-2 text-soft">{item.description}</p> : null}
+					{detailed && item.responsibilities.length > 0 ? (
+						<ul className="mt-3 space-y-2 text-soft">
+							{item.responsibilities.map((responsibility) => (
+								<li key={responsibility} className="pl-4 -indent-4">
+									<span aria-hidden>— </span>
+									{responsibility}
+								</li>
+							))}
+						</ul>
+					) : null}
 				</li>
 			))}
 		</ol>

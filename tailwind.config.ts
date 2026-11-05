@@ -16,16 +16,13 @@ const config: Config = {
 				soft: "var(--soft)",
 				muted: "var(--muted)",
 				line: "var(--line)",
-				accent: "var(--accent)",
 				raised: "var(--raised)",
 			},
 			fontFamily: {
-				serif: ["var(--font-serif)", "Georgia", "serif"],
-				body: ["var(--font-body)", "Georgia", "serif"],
-				mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+				sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
 			},
 			maxWidth: {
-				page: "72rem",
+				page: "42rem",
 			},
 		},
 	},

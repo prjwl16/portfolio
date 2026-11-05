@@ -11,9 +11,8 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
 	return (
-		<Container className="py-12 sm:py-16 md:py-20">
+		<Container className="py-12 sm:py-16">
 			<PageHeader
-				index="02 — Work"
 				title="Work"
 				lede="I'm a full-stack developer that loves building products and web apps that can impact millions of lives."
 			/>

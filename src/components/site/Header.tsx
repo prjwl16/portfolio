@@ -113,58 +113,55 @@ export function Header() {
 
 	return (
 		<>
-		<header className="site-header sticky top-0 z-40 border-b border-t-[3px] border-b-line border-t-accent">
-			<div className="mx-auto flex h-16 max-w-page items-center justify-between gap-4 px-5 sm:px-8">
-				<Link href="/" className="font-serif text-lg italic tracking-tight text-ink">
-					{profile.name}
-				</Link>
+			<header className="sticky top-0 z-40 border-b border-line bg-bg">
+				<div className="mx-auto flex h-14 max-w-page items-center justify-between gap-4 px-6">
+					<Link href="/" className="text-[0.95rem] font-medium tracking-tight text-ink">
+						{profile.name}
+					</Link>
 
-				<nav aria-label="Primary" className="hidden lg:block">
-					<ul className="flex items-center gap-7">
-						{nav.map((item) => {
-							const active = pathname === item.href;
-							return (
-								<li key={item.href}>
-									<Link
-										href={item.href}
-										aria-current={active ? "page" : undefined}
-										className={cn(
-											"font-mono text-[0.8125rem] tracking-wide",
-											active ? "text-ink underline decoration-accent decoration-1 underline-offset-[6px]" : "text-muted hover:text-ink"
-										)}
-									>
-										{item.label}
-									</Link>
-								</li>
-							);
-						})}
-					</ul>
-				</nav>
+					<nav aria-label="Primary" className="hidden md:block">
+						<ul className="flex items-center gap-6">
+							{nav.map((item) => {
+								const active = pathname === item.href;
+								return (
+									<li key={item.href}>
+										<Link
+											href={item.href}
+											aria-current={active ? "page" : undefined}
+											className={cn("text-sm", active ? "font-medium text-ink" : "text-muted hover:text-ink")}
+										>
+											{item.label}
+										</Link>
+									</li>
+								);
+							})}
+						</ul>
+					</nav>
 
-				<div className="flex items-center gap-2">
-					<button type="button" className="icon-button" onClick={toggleTheme} aria-label="Toggle color theme">
-						<SunIcon />
-						<MoonIcon />
-					</button>
-					<button
-						ref={menuButtonRef}
-						type="button"
-						className="icon-button lg:hidden"
-						aria-expanded={open}
-						aria-controls={menuId}
-						aria-label={open ? "Close menu" : "Open menu"}
-						onClick={() => setOpen((value) => !value)}
-					>
-						{open ? <CloseIcon /> : <MenuIcon />}
-					</button>
+					<div className="flex items-center">
+						<button type="button" className="icon-button" onClick={toggleTheme} aria-label="Toggle color theme">
+							<SunIcon />
+							<MoonIcon />
+						</button>
+						<button
+							ref={menuButtonRef}
+							type="button"
+							className="icon-button md:hidden"
+							aria-expanded={open}
+							aria-controls={menuId}
+							aria-label={open ? "Close menu" : "Open menu"}
+							onClick={() => setOpen((value) => !value)}
+						>
+							{open ? <CloseIcon /> : <MenuIcon />}
+						</button>
+					</div>
 				</div>
-			</div>
-		</header>
+			</header>
 
 			{open ? (
-				<div id={menuId} className="fixed inset-x-0 bottom-0 top-16 z-50 overflow-y-auto border-t border-line bg-bg lg:hidden">
-					<nav aria-label="Mobile">
-						<ul className="px-5 py-2">
+				<div id={menuId} className="fixed inset-x-0 bottom-0 top-14 z-50 overflow-y-auto bg-bg md:hidden">
+					<nav aria-label="Mobile" className="mx-auto max-w-page px-6 py-4">
+						<ul>
 							{nav.map((item, index) => {
 								const active = pathname === item.href;
 								return (
@@ -173,12 +170,8 @@ export function Header() {
 											ref={index === 0 ? firstLinkRef : undefined}
 											href={item.href}
 											aria-current={active ? "page" : undefined}
-											className={cn(
-												"flex items-baseline gap-4 py-4 font-serif text-3xl tracking-tight",
-												active ? "text-accent" : "text-ink"
-											)}
+											className={cn("block py-4 text-lg", active ? "font-medium text-ink" : "text-soft")}
 										>
-											<span className="font-mono text-[0.75rem] tracking-[0.14em] text-muted">{item.index}</span>
 											{item.label}
 										</Link>
 									</li>

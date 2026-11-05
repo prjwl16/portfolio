@@ -1,31 +1,16 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
-import { Fraunces, IBM_Plex_Mono, Newsreader } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 import { profile, socials, themeInitScript } from "@/constants/site";
 
-const fraunces = Fraunces({
+const inter = Inter({
 	subsets: ["latin"],
 	display: "swap",
-	style: ["normal", "italic"],
-	variable: "--font-serif",
-});
-
-const newsreader = Newsreader({
-	subsets: ["latin"],
-	display: "swap",
-	style: ["normal", "italic"],
-	variable: "--font-body",
-});
-
-const plex = IBM_Plex_Mono({
-	subsets: ["latin"],
-	weight: ["400", "500"],
-	display: "swap",
-	variable: "--font-mono",
+	variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -53,8 +38,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
 	themeColor: [
-		{ media: "(prefers-color-scheme: light)", color: "#f6f3ec" },
-		{ media: "(prefers-color-scheme: dark)", color: "#12110e" },
+		{ media: "(prefers-color-scheme: light)", color: "#ffffff" },
+		{ media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
 	],
 };
 
@@ -78,8 +63,8 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en" suppressHydrationWarning className={`${fraunces.variable} ${newsreader.variable} ${plex.variable}`}>
-			<body className="flex min-h-dvh flex-col bg-bg font-body text-ink antialiased">
+		<html lang="en" suppressHydrationWarning className={inter.variable}>
+			<body className="flex min-h-dvh flex-col bg-bg font-sans text-ink antialiased">
 				<script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
 				<a href="#content" className="skip-link">
 					Skip to content
