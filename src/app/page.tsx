@@ -42,21 +42,6 @@ export default function Home() {
 				</p>
 			</div>
 
-			<ul className="mt-8 grid gap-6 border-y border-line py-6 sm:grid-cols-3">
-				<li>
-					<p className="text-2xl font-semibold tracking-tight">1,400+</p>
-					<p className="mt-1 text-sm text-muted">Pull requests at Dezy</p>
-				</li>
-				<li>
-					<p className="text-2xl font-semibold tracking-tight">487 → 64 ms</p>
-					<p className="mt-1 text-sm text-muted">Checkout API latency at Flipkart</p>
-				</li>
-				<li>
-					<p className="text-2xl font-semibold tracking-tight">Zero downtime</p>
-					<p className="mt-1 text-sm text-muted">Platform migration at Dezy</p>
-				</li>
-			</ul>
-
 			<section aria-labelledby="work-heading" className="mt-16 scroll-mt-20">
 				<SectionHeading id="work-heading" title="Work" href="/work" action="All work" />
 				<WorkList limit={3} />
