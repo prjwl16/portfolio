@@ -25,6 +25,9 @@ export function WorkList({ detailed = false, limit }: { detailed?: boolean; limi
 							))}
 						</ul>
 					) : null}
+					{detailed && item.stack && item.stack.length > 0 ? (
+						<p className="mt-3 text-sm text-muted">{item.stack.join(" · ")}</p>
+					) : null}
 				</li>
 			))}
 		</ol>

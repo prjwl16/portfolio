@@ -3,8 +3,7 @@ import { Product } from "@/types/products";
 export const projects: Product[] = [
 	{
 		title: "Dear Patient",
-		description:
-			"A heartfelt digital companion for healthcare providers to write, manage, and send empathetic letters or updates to patients with ease and warmth.",
+		description: "A WhatsApp-first AI nurse for clinics.",
 		thumbnail: "https://images.unsplash.com/photo-1580281657521-6a42b0a6b2c3?w=800&h=600&fit=crop&crop=center",
 		images: [
 			"https://images.unsplash.com/photo-1580281657521-6a42b0a6b2c3?w=800&h=600&fit=crop&crop=center",
@@ -12,10 +11,10 @@ export const projects: Product[] = [
 		],
 		href: "https://dearpatient.in/",
 		slug: "dear-patient",
-		note: "WhatsApp-first AI healthcare assistant",
-		stack: ["Next.js", "OpenAI", "Google Gemini", "Shadcn/UI", "PostgreSQL", "Node.js"],
+		note: "WhatsApp-first AI nurse",
+		stack: ["LangGraph", "AWS", "Docker"],
 		content:
-			"Dear Patient bridges the gap between doctors and patients by making communication more personal and comforting. Whether it's a recovery note or a health reminder, the app focuses on empathy, simplicity, and trust... because care shouldn't feel automated.",
+			"It extracts prescriptions and documents, and uses LangGraph agents with tool calling and patient context. The clinic backend is multi-tenant, running in production on AWS EC2 and Docker.",
 		showLinkPreview: true,
 	},
 	{

@@ -33,12 +33,12 @@ export default function Home() {
 					and the little design choices most people ignore.
 				</p>
 				<p>
-					Until June 2026 I was an SDE-1 at Flipkart, on Cleartrip, building a travel platform for millions of users. Before that I was a full-stack
-					developer at Trips For Business. About five years in, still learning every day.
+					Until June 2026 I was an SDE-1 at Flipkart, on checkout. Before that I was an SDE-1 at Cleartrip, on Cleartrip for Work. About four years
+					in, still learning every day.
 				</p>
 				<p>
 					I like clean systems and small, careful ideas. On weekends I tinker with side projects. Most never leave my laptop, but a couple do. The one
-					I keep coming back to is Dear Patient, a WhatsApp-first AI healthcare assistant.
+					I keep coming back to is Dear Patient, a WhatsApp-first AI nurse.
 				</p>
 				<p className="text-muted">Runs on chai and a bit of curiosity.</p>
 				<p>

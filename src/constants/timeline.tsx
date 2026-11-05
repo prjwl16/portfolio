@@ -5,39 +5,49 @@ export type Role = {
 	dateTime?: string;
 	description: string;
 	responsibilities: string[];
+	stack?: string[];
 };
 
 export const timeline: Role[] = [
 	{
 		company: "Dezy",
-		title: "Senior Software Engineer",
+		title: "Senior Software Engineer, Platform Migration Lead",
 		date: "Jul 2026 — Present",
 		dateTime: "2026-07",
-		description: "Dental healthtech",
-		responsibilities: [],
+		description: "I own engineering for the core operations platform.",
+		responsibilities: [
+			"Led the zero-downtime rebuild from Retool and serverless APIs to NestJS, React 19, and PostgreSQL on AWS, across 1,400+ pull requests.",
+			"Migrated data with CDC from MongoDB and DynamoDB to Postgres, including backfills of hundreds of thousands of records.",
+			"Built Dezy Assist, a text-to-SQL agent that keeps patient data protected, with versioned prompts, evals, and tracing.",
+			"Integrated Exotel, Gallabox, Meta WhatsApp, and ads attribution, with role and clinic access control.",
+			"Set engineering standards: test-first delivery, staging-to-production CI/CD, and review gates for AI coding agents.",
+		],
+		stack: ["NestJS", "TypeScript", "React 19", "PostgreSQL", "MongoDB", "DynamoDB", "AWS CDK", "ECS Fargate", "RDS", "ElastiCache", "Sentry"],
 	},
 	{
-		company: "Cleartrip - Flipkart",
-		title: "Software Development Engineer - I",
-		date: "2022 — Jun 2026",
-		dateTime: "2022",
-		description: "Building a travel platform for millions of users",
+		company: "Flipkart (checkout)",
+		title: "SDE-1",
+		date: "Jun 2025 — Jun 2026",
+		dateTime: "2025-06",
+		description: "Checkout at Flipkart scale.",
 		responsibilities: [
-			"Led integration of HRMS systems (Zoho People, PeopleStrong, Darwinbox, workline), achieving 100% automation of employee onboarding processes for clients",
-			"Implemented SAML-based SSO integration, streamlining login processes and reducing login-related support queries by 100",
-			"Led the integration of invoicing modules (Tally, Zoho Invoice, Oracle Fusion), achieving 100% automation and saving clients number of hours per month",
-			"Worked extensively with in memory databases | Queue Systems | RPC frameworks",
+			"Cut checkout API latency from 487 ms to 64 ms, and p99 event-loop latency from 20 ms to 2.5 ms.",
+			"Worked on checkout services for Big Billion Days.",
+			"Fixed a UPI SMS-spoofing vulnerability with device-level verification.",
 		],
+		stack: ["Java", "Node.js", "Redis", "PostgreSQL", "AWS"],
 	},
 	{
-		company: "Trips For Business",
-		title: "Full Stack Developer",
-		date: "2021 — 2022",
-		dateTime: "2021",
-		description: "Building a platform for business travel",
+		company: "Cleartrip (Cleartrip for Work)",
+		title: "SDE-1",
+		date: "Feb 2023 — Jun 2025",
+		dateTime: "2023-02",
+		description: "Enterprise onboarding and HRMS integrations.",
 		responsibilities: [
-			"Developed and maintained web applications using Node.js for the backend and React for the frontend",
-			"Improved API performance and security by optimizing database queries and backend logic",
+			"Led Zoho People, PeopleStrong, and Darwinbox integrations that automated enterprise onboarding.",
+			"Built a reusable framework for HRMS sync.",
+			"Shipped high-throughput REST and RPC services in Java and Vert.x.",
 		],
+		stack: ["Java", "Vert.x", "Redis", "MySQL", "RPC", "Message queues"],
 	},
 ];
