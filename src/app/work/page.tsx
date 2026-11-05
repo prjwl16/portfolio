@@ -6,7 +6,7 @@ import { WorkList } from "@/components/site/WorkList";
 export const metadata: Metadata = {
 	title: "Work",
 	description:
-		"Work history for Prajwal More: Senior Software Engineer at Dezy, supervising engineer at Dhyay, formerly SDE-1 at Flipkart (Cleartrip) and full-stack developer at Trips For Business.",
+		"Work history for Prajwal More: Senior Software Engineer at Dezy, formerly SDE-1 at Flipkart (Cleartrip) and full-stack developer at Trips For Business.",
 };
 
 export default function WorkPage() {

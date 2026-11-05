@@ -7,7 +7,7 @@ import { interests, learning, profile, socials, stack } from "@/constants/site";
 export const metadata: Metadata = {
 	title: "About",
 	description:
-		"About Prajwal More, a software engineer in Bengaluru. Senior Software Engineer at Dezy, supervising engineer at Dhyay, previously SDE-1 at Flipkart on Cleartrip.",
+		"About Prajwal More, a software engineer in Bengaluru. Senior Software Engineer at Dezy, previously SDE-1 at Flipkart on Cleartrip.",
 };
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
 			<div className="space-y-4 text-[1.05rem] leading-relaxed">
 				<p>
 					I&apos;m a software engineer with about five years of experience, based in {profile.location}. Since July 2026 I&apos;ve been a Senior Software
-					Engineer at Dezy, a dental healthtech company. I&apos;m also a supervising engineer at Dhyay, an astrology platform.
+					Engineer at Dezy, a dental healthtech company.
 				</p>
 				<p>
 					Until June 2026 I was a Software Development Engineer - I at Flipkart, on Cleartrip, building a travel platform for millions of users. Before

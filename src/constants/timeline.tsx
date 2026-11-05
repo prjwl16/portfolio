@@ -17,13 +17,6 @@ export const timeline: Role[] = [
 		responsibilities: [],
 	},
 	{
-		company: "Dhyay",
-		title: "Supervising Engineer",
-		date: "Current",
-		description: "Astrology platform",
-		responsibilities: [],
-	},
-	{
 		company: "Cleartrip - Flipkart",
 		title: "Software Development Engineer - I",
 		date: "2022 — Jun 2026",

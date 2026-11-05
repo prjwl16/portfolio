@@ -7,7 +7,7 @@ export const profile = {
 	resumeHref:
 		"https://drive.google.com/file/d/1aWmywIm8Pi2TJhQhEATOgUCyh9V622NE/view?usp=drive_link",
 	description:
-		"Prajwal More is a software engineer in Bengaluru. Senior Software Engineer at Dezy, supervising engineer at Dhyay, and formerly an SDE-1 at Flipkart on Cleartrip.",
+		"Prajwal More is a software engineer in Bengaluru. Senior Software Engineer at Dezy, and formerly an SDE-1 at Flipkart on Cleartrip.",
 };
 
 export const nav = [
