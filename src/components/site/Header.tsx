@@ -113,7 +113,7 @@ export function Header() {
 
 	return (
 		<>
-			<header className="sticky top-0 z-40 border-b border-line bg-bg">
+			<header className="sticky top-0 z-40 bg-bg">
 				<div className="mx-auto flex h-14 max-w-page items-center justify-between gap-4 px-6">
 					<Link href="/" className="text-[0.95rem] font-medium tracking-tight text-ink">
 						{profile.name}
