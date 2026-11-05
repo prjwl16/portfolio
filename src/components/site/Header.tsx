@@ -135,6 +135,17 @@ export function Header() {
 									</li>
 								);
 							})}
+							<li>
+								<a
+									href={profile.resumeHref}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-sm text-muted hover:text-ink"
+								>
+									Resume
+									<span className="sr-only"> (opens in a new tab)</span>
+								</a>
+							</li>
 						</ul>
 					</nav>
 
@@ -177,6 +188,17 @@ export function Header() {
 									</li>
 								);
 							})}
+							<li className="border-b border-line">
+								<a
+									href={profile.resumeHref}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="block py-4 text-lg text-soft"
+								>
+									Resume
+									<span className="sr-only"> (opens in a new tab)</span>
+								</a>
+							</li>
 						</ul>
 					</nav>
 				</div>

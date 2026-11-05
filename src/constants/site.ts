@@ -11,8 +11,7 @@ export const profile = {
 	location: "Bengaluru",
 	email: "prajumore76@gmail.com",
 	url: "https://prajwal.wtf",
-	resumeHref:
-		"https://drive.google.com/file/d/1aWmywIm8Pi2TJhQhEATOgUCyh9V622NE/view?usp=drive_link",
+	resumeHref: "/Prajwal_More_Resume.pdf",
 	description:
 		"Backend and AI engineer in Bengaluru. Senior Software Engineer at Dezy, previously an SDE-1 at Flipkart and at Cleartrip.",
 };

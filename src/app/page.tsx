@@ -63,6 +63,11 @@ export default function Home() {
 					<a className="link" href={`mailto:${profile.email}`}>
 						{profile.email}
 					</a>
+					<span aria-hidden> · </span>
+					<a className="link" href={profile.resumeHref} target="_blank" rel="noopener noreferrer">
+						Resume
+						<span className="sr-only"> (opens in a new tab)</span>
+					</a>
 				</p>
 				<ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
 					{socials.map((item) => (

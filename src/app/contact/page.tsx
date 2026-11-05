@@ -20,12 +20,9 @@ export default function ContactPage() {
 				<a className="link break-words" href={`mailto:${profile.email}`}>
 					{profile.email}
 				</a>
-			</p>
-
-			<h2 className="mt-10 text-sm font-medium text-muted">Resume</h2>
-			<p className="mt-2">
+				<span aria-hidden> · </span>
 				<a className="link" href={profile.resumeHref} target="_blank" rel="noopener noreferrer">
-					View resume
+					Resume
 					<span className="sr-only"> (opens in a new tab)</span>
 				</a>
 			</p>
