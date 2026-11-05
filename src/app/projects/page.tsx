@@ -6,7 +6,7 @@ import { ProjectList } from "@/components/site/ProjectList";
 
 export const metadata: Metadata = {
 	title: "Projects",
-	description: "Projects by Prajwal More, including Dezy Assist, Dear Patient, Clusta.shop, and Sub2x.",
+	description: "Personal projects by Prajwal More: Dear Patient, Clusta.shop, and Sub2x.",
 	alternates: { canonical: "/projects" },
 	openGraph: { url: "/projects", images: [ogImage] },
 };

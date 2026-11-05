@@ -25,7 +25,7 @@ export function ProjectList({ detailed = false }: { detailed?: boolean }) {
 						</ul>
 					) : null}
 					{detailed && typeof project.content === "string" ? <p className="mt-2 text-soft">{project.content}</p> : null}
-					{detailed && project.stack && project.stack.length > 0 ? (
+					{project.stack && project.stack.length > 0 ? (
 						<p className="mt-3 text-sm text-muted">Stack: {project.stack.join(", ")}.</p>
 					) : null}
 				</li>

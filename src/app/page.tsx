@@ -56,11 +56,6 @@ export default function Home() {
 				<ProjectList />
 			</section>
 
-			<section aria-labelledby="notes-heading" className="mt-20 scroll-mt-20">
-				<SectionHeading id="notes-heading" title="Notes" href="/notes" action="Notes" />
-				<p className="mt-3 text-soft">Nothing is published here yet.</p>
-			</section>
-
 			<section aria-labelledby="contact-heading" className="mt-20 scroll-mt-20">
 				<SectionHeading id="contact-heading" title="Contact" href="/contact" action="Contact" />
 				<p className="mt-3 text-soft">Email is the best way to reach me.</p>

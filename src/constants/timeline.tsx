@@ -4,6 +4,8 @@ export type Role = {
 	date: string;
 	dateTime?: string;
 	description: string;
+	/** Strongest points shown on the home page. The work page lists every responsibility. */
+	preview?: string[];
 	responsibilities: string[];
 	stack?: string[];
 };
@@ -14,7 +16,13 @@ export const timeline: Role[] = [
 		title: "Senior Software Engineer, Platform Migration Lead",
 		date: "Jul 2026 — Present",
 		dateTime: "2026-07",
-		description: "I own engineering end to end for the core operations platform: roadmap, architecture, AWS infrastructure, standards, CI/CD, and delivery.",
+		description:
+			"I own engineering end to end for the core operations platform: roadmap, architecture, AWS infrastructure, standards, CI/CD, and delivery. Clinics use it for patients, appointments, payments, support, and ERP.",
+		preview: [
+			"Replaced Retool, serverless APIs, and Heimdall with NestJS, React 19, and PostgreSQL on AWS (CDK, ECS Fargate, RDS, ElastiCache). Zero-downtime migration, 1,400+ pull requests.",
+			"Moved data with CDC from MongoDB and DynamoDB to Postgres, including backfills of hundreds of thousands of records and a single write-back path.",
+			"Built Dezy Assist, a text-to-SQL agent that keeps patient data hidden, with versioned prompts and evals, Sentry tracing, and daily WhatsApp follow-ups.",
+		],
 		responsibilities: [
 			"Replaced Retool, serverless APIs, and Heimdall with NestJS, React 19, and PostgreSQL on AWS (CDK, ECS Fargate, RDS, ElastiCache). Zero-downtime migration, 1,400+ pull requests.",
 			"Moved data with CDC from MongoDB and DynamoDB to Postgres, including backfills of hundreds of thousands of records and a single write-back path.",
@@ -31,7 +39,14 @@ export const timeline: Role[] = [
 		title: "SDE-1",
 		date: "Jun 2025 — Jun 2026",
 		dateTime: "2025-06",
-		description: "Checkout services.",
+		description:
+			"I was an SDE-1 on the checkout APIs that serve Flipkart, including during Big Billion Days. The work was latency on the request path and a UPI fraud fix.",
+		preview: [
+			"Cut checkout API latency from 487 ms to 64 ms.",
+			"Cut p99 event-loop latency from 20 ms to 2.5 ms.",
+			"Worked on checkout services for Big Billion Days.",
+			"Fixed a UPI SMS-spoofing vulnerability with device-level verification.",
+		],
 		responsibilities: [
 			"Cut checkout API latency from 487 ms to 64 ms.",
 			"Cut p99 event-loop latency from 20 ms to 2.5 ms.",
@@ -45,7 +60,14 @@ export const timeline: Role[] = [
 		title: "SDE-1",
 		date: "Feb 2023 — Jun 2025",
 		dateTime: "2023-02",
-		description: "Enterprise onboarding and HRMS integrations.",
+		description:
+			"I was an SDE-1 on Cleartrip for Work, Cleartrip's product for company travel. I led the HRMS integrations that bring employee data in, and the services that keep that sync running.",
+		preview: [
+			"Led integrations with Zoho People, PeopleStrong, and Darwinbox.",
+			"Automated enterprise onboarding.",
+			"Built a reusable HRMS sync framework.",
+			"Shipped high-throughput REST and RPC services in Java and Vert.x.",
+		],
 		responsibilities: [
 			"Led integrations with Zoho People, PeopleStrong, and Darwinbox.",
 			"Automated enterprise onboarding.",
