@@ -1,21 +1,28 @@
+export const ogImage = {
+	url: "/og.jpg",
+	width: 1200,
+	height: 1200,
+	alt: "Prajwal More",
+} as const;
+
 export const profile = {
 	name: "Prajwal More",
-	role: "Software engineer",
+	role: "Backend and AI engineer",
 	location: "Bengaluru",
 	email: "prajumore76@gmail.com",
 	url: "https://prajwal.wtf",
 	resumeHref:
 		"https://drive.google.com/file/d/1aWmywIm8Pi2TJhQhEATOgUCyh9V622NE/view?usp=drive_link",
 	description:
-		"Prajwal More is a backend and AI engineer in Bengaluru. Senior Software Engineer at Dezy, with 4+ years across Dezy, Flipkart, and Cleartrip.",
+		"Backend and AI engineer in Bengaluru. Senior Software Engineer at Dezy, previously an SDE-1 at Flipkart and at Cleartrip.",
 };
 
 export const nav = [
-	{ href: "/about", label: "About", index: "01" },
-	{ href: "/work", label: "Work", index: "02" },
-	{ href: "/projects", label: "Projects", index: "03" },
-	{ href: "/notes", label: "Notes", index: "04" },
-	{ href: "/contact", label: "Contact", index: "05" },
+	{ href: "/about", label: "About" },
+	{ href: "/work", label: "Work" },
+	{ href: "/projects", label: "Projects" },
+	{ href: "/notes", label: "Notes" },
+	{ href: "/contact", label: "Contact" },
 ] as const;
 
 export const socials = [

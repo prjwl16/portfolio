@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
-import { profile, socials, themeInitScript } from "@/constants/site";
+import { ogImage, profile, socials, themeInitScript } from "@/constants/site";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -16,23 +16,26 @@ const inter = Inter({
 export const metadata: Metadata = {
 	metadataBase: new URL(profile.url),
 	title: {
-		default: `${profile.name} · Software Engineer`,
+		default: profile.name,
 		template: `%s · ${profile.name}`,
 	},
 	description: profile.description,
 	authors: [{ name: profile.name, url: profile.url }],
 	openGraph: {
-		title: `${profile.name} · Software Engineer`,
+		title: profile.name,
 		description: profile.description,
 		url: profile.url,
 		siteName: profile.name,
 		locale: "en_IN",
 		type: "website",
+		images: [ogImage],
 	},
 	twitter: {
 		card: "summary",
-		title: `${profile.name} · Software Engineer`,
+		title: profile.name,
 		description: profile.description,
+		images: ["/og.jpg"],
+		creator: "@prjwl_16",
 	},
 };
 
@@ -49,6 +52,8 @@ const jsonLd = {
 	name: profile.name,
 	jobTitle: "Senior Software Engineer",
 	email: profile.email,
+	description: profile.description,
+	image: `${profile.url}/og.jpg`,
 	alumniOf: {
 		"@type": "EducationalOrganization",
 		name: "Pune University",

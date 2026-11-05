@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import portrait from "@/images/prajwal.webp";
@@ -5,11 +6,17 @@ import { Container } from "@/components/site/Container";
 import { ProjectList } from "@/components/site/ProjectList";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { WorkList } from "@/components/site/WorkList";
-import { profile, socials } from "@/constants/site";
+import { ogImage, profile, socials } from "@/constants/site";
+
+export const metadata: Metadata = {
+	alternates: { canonical: "/" },
+	description: profile.description,
+	openGraph: { url: "/", images: [ogImage] },
+};
 
 export default function Home() {
 	return (
-		<Container className="pb-8 pt-12 sm:pt-16">
+		<Container className="pb-16 pt-14 sm:pt-20">
 			<div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
 				<Image
 					src={portrait}
@@ -21,16 +28,16 @@ export default function Home() {
 					className="h-40 w-40 shrink-0 rounded-full border border-line object-cover sm:h-48 sm:w-48"
 				/>
 				<div>
-					<h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{profile.name}</h1>
-					<p className="mt-2 text-lg text-soft">Backend and AI engineer in {profile.location}</p>
+					<h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">{profile.name}</h1>
+					<p className="mt-3 text-soft">Backend and AI engineer in {profile.location}</p>
 					<p className="mt-1 text-muted">Senior Software Engineer at Dezy</p>
 				</div>
 			</div>
 
-			<div className="mt-10 space-y-4 text-[1.05rem] leading-relaxed">
+			<div className="mt-8 space-y-4">
 				<p>
-					I&apos;m a backend and AI engineer. I&apos;ve spent 4+ years at Dezy, Flipkart, and Cleartrip, mostly on AI agents and distributed systems. At
-					Dezy I own engineering for the core operations platform. Before that I worked on checkout at Flipkart and on Cleartrip for Work.
+					I&apos;ve spent 4+ years at Dezy, Flipkart, and Cleartrip, mostly on AI agents and distributed systems. At Dezy I own engineering for the
+					core operations platform. Before that I worked on checkout at Flipkart and on Cleartrip for Work.
 				</p>
 				<p>
 					<Link href="/about" className="link">
@@ -39,22 +46,22 @@ export default function Home() {
 				</p>
 			</div>
 
-			<section aria-labelledby="work-heading" className="mt-16 scroll-mt-20">
+			<section aria-labelledby="work-heading" className="mt-20 scroll-mt-20">
 				<SectionHeading id="work-heading" title="Work" href="/work" action="All work" />
 				<WorkList limit={3} />
 			</section>
 
-			<section aria-labelledby="projects-heading" className="mt-16 scroll-mt-20">
+			<section aria-labelledby="projects-heading" className="mt-20 scroll-mt-20">
 				<SectionHeading id="projects-heading" title="Projects" href="/projects" action="All projects" />
 				<ProjectList />
 			</section>
 
-			<section aria-labelledby="notes-heading" className="mt-16 scroll-mt-20">
+			<section aria-labelledby="notes-heading" className="mt-20 scroll-mt-20">
 				<SectionHeading id="notes-heading" title="Notes" href="/notes" action="Notes" />
 				<p className="mt-3 text-soft">Nothing is published here yet.</p>
 			</section>
 
-			<section aria-labelledby="contact-heading" className="mt-16 scroll-mt-20">
+			<section aria-labelledby="contact-heading" className="mt-20 scroll-mt-20">
 				<SectionHeading id="contact-heading" title="Contact" href="/contact" action="Contact" />
 				<p className="mt-3 text-soft">Email is the best way to reach me.</p>
 				<p className="mt-4">

@@ -4,7 +4,7 @@ export function ProjectList({ detailed = false }: { detailed?: boolean }) {
 	return (
 		<ol>
 			{projects.map((project) => (
-				<li key={project.slug} className="border-b border-line py-5">
+				<li key={project.slug} className="border-b border-line py-6">
 					<h3 className="font-medium">
 						{project.href ? (
 							<a href={project.href} target="_blank" rel="noopener noreferrer" className="link">
@@ -18,12 +18,9 @@ export function ProjectList({ detailed = false }: { detailed?: boolean }) {
 					{project.note ? <p className="mt-1 text-sm text-soft">{project.note}</p> : null}
 					<p className="mt-2 text-soft">{project.description}</p>
 					{detailed && project.highlights && project.highlights.length > 0 ? (
-						<ul className="mt-3 space-y-2 text-soft">
+						<ul className="mt-3 list-disc space-y-2 pl-5 text-soft marker:text-muted">
 							{project.highlights.map((highlight) => (
-								<li key={highlight} className="pl-4 -indent-4">
-									<span aria-hidden>— </span>
-									{highlight}
-								</li>
+								<li key={highlight}>{highlight}</li>
 							))}
 						</ul>
 					) : null}

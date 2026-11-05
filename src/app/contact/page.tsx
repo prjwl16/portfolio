@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/site/Container";
 import { PageHeader } from "@/components/site/PageHeader";
-import { profile, socials } from "@/constants/site";
+import { ogImage, profile, socials } from "@/constants/site";
 
 export const metadata: Metadata = {
 	title: "Contact",
 	description: `Contact Prajwal More by email at ${profile.email}. LinkedIn, GitHub, X, Instagram, and LeetCode.`,
+	alternates: { canonical: "/contact" },
+	openGraph: { url: "/contact", images: [ogImage] },
 };
 
 export default function ContactPage() {
 	return (
-		<Container className="py-12 sm:py-16">
+		<Container className="py-16 sm:py-20">
 			<PageHeader title="Contact" lede="Email is the best way to reach me." />
 
 			<h2 className="text-sm font-medium text-muted">Email</h2>

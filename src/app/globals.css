@@ -49,11 +49,22 @@
 }
 
 @layer components {
+	h1,
+	h2,
+	h3 {
+		line-height: 1.25;
+		text-wrap: balance;
+	}
+
+	p {
+		text-wrap: pretty;
+	}
+
 	.link {
 		text-decoration: underline;
 		text-decoration-thickness: 1px;
 		text-underline-offset: 0.18em;
-		text-decoration-color: color-mix(in srgb, var(--ink) 35%, transparent);
+		text-decoration-color: color-mix(in srgb, var(--ink) 70%, transparent);
 	}
 
 	.link:hover {

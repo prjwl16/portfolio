@@ -12,7 +12,7 @@ export function SectionHeading({
 	action?: string;
 }) {
 	return (
-		<div className="mb-1 flex items-baseline justify-between gap-4">
+		<div className="mb-2 flex items-baseline justify-between gap-4">
 			<h2 id={id} className="text-xl font-semibold tracking-tight">
 				{title}
 			</h2>
