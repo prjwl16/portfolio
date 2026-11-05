@@ -9,7 +9,6 @@ export function ProjectList({ detailed = false }: { detailed?: boolean }) {
 						{project.href ? (
 							<a href={project.href} target="_blank" rel="noopener noreferrer" className="link">
 								{project.title}
-								<span aria-hidden> ↗</span>
 								<span className="sr-only"> (opens in a new tab)</span>
 							</a>
 						) : (
@@ -29,14 +28,8 @@ export function ProjectList({ detailed = false }: { detailed?: boolean }) {
 						</ul>
 					) : null}
 					{detailed && typeof project.content === "string" ? <p className="mt-2 text-soft">{project.content}</p> : null}
-					{project.stack && project.stack.length > 0 ? (
-						<ul className="mt-3 flex flex-wrap gap-2" aria-label={`${project.title} stack`}>
-							{project.stack.map((tag) => (
-								<li key={tag} className="rounded-full border border-line px-2.5 py-0.5 text-xs text-muted">
-									{tag}
-								</li>
-							))}
-						</ul>
+					{detailed && project.stack && project.stack.length > 0 ? (
+						<p className="mt-3 text-sm text-muted">Stack: {project.stack.join(", ")}.</p>
 					) : null}
 				</li>
 			))}

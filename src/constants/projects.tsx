@@ -34,8 +34,7 @@ export const projects: Product[] = [
 	},
 	{
 		title: "Clusta.shop",
-		description:
-			"A community-driven eCommerce platform where small brands and indie creators come together to sell unique, high-quality products in one elegant space.",
+		description: "An eCommerce site where small brands and indie creators sell in one place.",
 		thumbnail: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=600&fit=crop&crop=center",
 		images: [
 			"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=600&fit=crop&crop=center",
@@ -45,15 +44,13 @@ export const projects: Product[] = [
 		slug: "clusta-shop",
 		stack: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS", "Stripe"],
 		content:
-			"Clusta.shop is built around community and curation. Instead of endless scrolling, shoppers discover collections handpicked by independent sellers. It's a blend of modern design, smooth UX, and the heart of small business... crafted to make online shopping feel human again.",
+			"Shoppers browse collections picked by independent sellers.",
 		showLinkPreview: true,
 	},
 
-	// ⚡ New project 2
 	{
 		title: "Sub2x",
-		description:
-			"A sleek, growth-driven SaaS platform that helps creators and startups double their subscription conversions through smart onboarding, retention tools, and analytics.",
+		description: "A SaaS product for subscription onboarding, retention, and analytics.",
 		thumbnail: "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=600&fit=crop&crop=center",
 		images: [
 			"https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=600&fit=crop&crop=center",
@@ -63,7 +60,7 @@ export const projects: Product[] = [
 		slug: "sub2x",
 		stack: ["Next.js", "TypeScript", "Supabase", "Stripe", "PostgreSQL"],
 		content:
-			"Sub2x helps digital entrepreneurs and SaaS founders grow faster by tracking user behavior, optimizing pricing models, and automating retention strategies. It's designed with a modern dashboard and powerful insights... perfect for anyone chasing that next growth milestone.",
+			"It tracks user behavior, pricing, and retention.",
 		showLinkPreview: true,
 	},
 ];

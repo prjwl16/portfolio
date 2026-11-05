@@ -14,7 +14,7 @@ export default function WorkPage() {
 		<Container className="py-12 sm:py-16">
 			<PageHeader
 				title="Work"
-				lede="I'm a full-stack developer that loves building products and web apps that can impact millions of lives."
+				lede="Senior Software Engineer at Dezy. Before that, SDE-1 on checkout at Flipkart and on Cleartrip for Work."
 			/>
 			<WorkList detailed />
 		</Container>

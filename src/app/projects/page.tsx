@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
 	return (
 		<Container className="py-12 sm:py-16">
-			<PageHeader title="Projects" lede="Dezy Assist, Dear Patient, and a few other things I've shipped." />
+			<PageHeader title="Projects" lede="Dezy Assist and Dear Patient, plus Clusta.shop and Sub2x." />
 			<ProjectList detailed />
 		</Container>
 	);

@@ -26,13 +26,7 @@ export function WorkList({ detailed = false, limit }: { detailed?: boolean; limi
 						</ul>
 					) : null}
 					{detailed && item.stack && item.stack.length > 0 ? (
-						<ul className="mt-4 flex flex-wrap gap-2" aria-label={`${item.company} stack`}>
-							{item.stack.map((tag) => (
-								<li key={tag} className="rounded-full border border-line px-2.5 py-0.5 text-xs text-muted">
-									{tag}
-								</li>
-							))}
-						</ul>
+						<p className="mt-3 text-sm text-muted">Stack: {item.stack.join(", ")}.</p>
 					) : null}
 				</li>
 			))}

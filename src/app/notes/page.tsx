@@ -12,23 +12,10 @@ export const metadata: Metadata = {
 export default function NotesPage() {
 	return (
 		<Container className="py-12 sm:py-16">
-			<PageHeader
-				title="Notes"
-				lede="Short write-ups will live here — systems, databases, infrastructure, and the languages I'm learning. Nothing is published yet."
-			/>
+			<PageHeader title="Notes" lede="Nothing is published yet." />
 
-			<h2 className="text-xl font-semibold tracking-tight">On my mind</h2>
-			<p className="mt-3 text-soft">Not posts. Just the subjects I keep coming back to, until the notes exist.</p>
-			<ul className="mt-6 divide-y divide-line border-y border-line">
-				{interests.map((item) => (
-					<li key={item} className="py-3">
-						{item}
-					</li>
-				))}
-				<li className="py-3">Learning {learning.join(" and ")}</li>
-			</ul>
-			<p className="mt-8 text-soft">
-				Until then, the record is the{" "}
+			<p className="text-[1.05rem] leading-relaxed text-soft">
+				When I write, it will be about {interests.join(", ").toLowerCase()}, and about learning {learning.join(" and ")}. Until then, the record is the{" "}
 				<Link href="/work" className="link">
 					work
 				</Link>{" "}

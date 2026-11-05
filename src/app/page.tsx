@@ -5,8 +5,7 @@ import { Container } from "@/components/site/Container";
 import { ProjectList } from "@/components/site/ProjectList";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { WorkList } from "@/components/site/WorkList";
-import { SkillGroups } from "@/components/site/SkillGroups";
-import { learning, profile, seeking, socials } from "@/constants/site";
+import { profile, socials } from "@/constants/site";
 
 export default function Home() {
 	return (
@@ -30,12 +29,10 @@ export default function Home() {
 
 			<div className="mt-10 space-y-4 text-[1.05rem] leading-relaxed">
 				<p>
-					I&apos;m a backend and AI engineer with 4+ years across Dezy, Flipkart, and Cleartrip. I work on AI agents and distributed systems. At Dezy I
-					own engineering for the core operations platform, after checkout at Flipkart and Cleartrip for Work.
+					I&apos;m a backend and AI engineer. I&apos;ve spent 4+ years at Dezy, Flipkart, and Cleartrip, mostly on AI agents and distributed systems. At
+					Dezy I own engineering for the core operations platform. Before that I worked on checkout at Flipkart and on Cleartrip for Work.
 				</p>
-				<p className="text-muted">I like software that feels thoughtful. Runs on chai and a bit of curiosity.</p>
 				<p>
-					Open to {seeking.join(", ")} roles.{" "}
 					<Link href="/about" className="link">
 						More about me
 					</Link>
@@ -52,25 +49,16 @@ export default function Home() {
 				<ProjectList />
 			</section>
 
-			<section aria-labelledby="skills-heading" className="mt-16 scroll-mt-20">
-				<SectionHeading id="skills-heading" title="Skills" href="/about" action="About" />
-				<SkillGroups />
-				<p className="mt-4 text-soft">
-					<span className="font-medium text-ink">Learning. </span>
-					{learning.join(" and ")}.
-				</p>
-			</section>
-
 			<section aria-labelledby="notes-heading" className="mt-16 scroll-mt-20">
 				<SectionHeading id="notes-heading" title="Notes" href="/notes" action="Notes" />
-				<p className="mt-3 text-soft">Short write-ups on systems, databases, and whatever I&apos;m learning. Nothing is published here yet.</p>
+				<p className="mt-3 text-soft">Nothing is published here yet.</p>
 			</section>
 
 			<section aria-labelledby="contact-heading" className="mt-16 scroll-mt-20">
 				<SectionHeading id="contact-heading" title="Contact" href="/contact" action="Contact" />
-				<p className="mt-3 text-soft">Happy to chat about side projects, developer tools, or whatever you&apos;re working on.</p>
+				<p className="mt-3 text-soft">Email is the best way to reach me.</p>
 				<p className="mt-4">
-					<a className="link text-lg" href={`mailto:${profile.email}`}>
+					<a className="link" href={`mailto:${profile.email}`}>
 						{profile.email}
 					</a>
 				</p>

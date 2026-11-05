@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Container } from "@/components/site/Container";
 import { PageHeader } from "@/components/site/PageHeader";
 import { SkillGroups } from "@/components/site/SkillGroups";
@@ -16,49 +15,18 @@ export default function AboutPage() {
 		<Container className="py-12 sm:py-16">
 			<PageHeader
 				title="About"
-				lede="I like software that feels thoughtful — the kind that's clean, fast, and doesn't make users suffer. I'm into systems, structure, and the little design choices most people ignore. Currently figuring out how to get better at all of it, one bug fix and brain dump at a time."
+				lede="I'm a backend and AI engineer in Bengaluru. I've spent 4+ years at Dezy, Flipkart, and Cleartrip, mostly on AI agents and distributed systems."
 			/>
 
 			<div className="space-y-4 text-[1.05rem] leading-relaxed">
-				<p>
-					I&apos;m a backend and AI engineer with 4+ years across Dezy, Flipkart, and Cleartrip, based in {profile.location}. I work on AI agents and
-					distributed systems.
-				</p>
 				<p>
 					Since July 2026 I&apos;ve been a Senior Software Engineer at Dezy, a dental healthtech company, and I own engineering for the core operations
 					platform. Until June 2026 I was an SDE-1 at Flipkart, on checkout. Before that, from February 2023, I was an SDE-1 at Cleartrip, on Cleartrip
 					for Work.
 				</p>
-				<p>
-					I like clean systems and small, careful ideas. On weekends I tinker with side projects. Most never leave my laptop, but a couple do. Runs on
-					chai and a bit of curiosity.
-				</p>
-				<p>
-					I talk work, life, and code on{" "}
-					<a className="link" href="https://www.linkedin.com/in/moreprajwal/" target="_blank" rel="noopener noreferrer">
-						LinkedIn
-						<span className="sr-only"> (opens in a new tab)</span>
-					</a>
-					, ship on{" "}
-					<a className="link" href="https://github.com/prjwl16" target="_blank" rel="noopener noreferrer">
-						GitHub
-						<span className="sr-only"> (opens in a new tab)</span>
-					</a>
-					, and occasionally drop half-baked thoughts on{" "}
-					<a className="link" href="https://x.com/prjwl_16" target="_blank" rel="noopener noreferrer">
-						X
-						<span className="sr-only"> (opens in a new tab)</span>
-					</a>
-					.
-				</p>
+				<p>I&apos;m looking for {seeking.join(", ")} roles.</p>
+				<p>Most of my time goes to {interests.join(", ").toLowerCase()}.</p>
 			</div>
-
-			<h2 className="mt-14 text-xl font-semibold tracking-tight">Open to</h2>
-			<ul className="mt-3 space-y-2 text-soft">
-				{seeking.map((role) => (
-					<li key={role}>{role}</li>
-				))}
-			</ul>
 
 			<h2 className="mt-14 text-xl font-semibold tracking-tight">Skills</h2>
 			<SkillGroups />
@@ -72,13 +40,6 @@ export default function AboutPage() {
 				{education.degree}, {education.school}
 				<span className="text-muted"> · {education.cgpa} CGPA</span>
 			</p>
-
-			<h2 className="mt-14 text-xl font-semibold tracking-tight">Interests</h2>
-			<ul className="mt-3 space-y-2 text-soft">
-				{interests.map((item) => (
-					<li key={item}>{item}</li>
-				))}
-			</ul>
 
 			<h2 className="mt-14 text-xl font-semibold tracking-tight">Elsewhere</h2>
 			<ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
@@ -97,11 +58,6 @@ export default function AboutPage() {
 					</a>
 				</li>
 			</ul>
-			<p className="mt-8">
-				<Link href="/contact" className="link">
-					Say hello
-				</Link>
-			</p>
 		</Container>
 	);
 }

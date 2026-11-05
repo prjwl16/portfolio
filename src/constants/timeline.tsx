@@ -31,7 +31,7 @@ export const timeline: Role[] = [
 		title: "SDE-1",
 		date: "Jun 2025 — Jun 2026",
 		dateTime: "2025-06",
-		description: "Checkout at Flipkart scale.",
+		description: "Checkout services.",
 		responsibilities: [
 			"Cut checkout API latency from 487 ms to 64 ms.",
 			"Cut p99 event-loop latency from 20 ms to 2.5 ms.",

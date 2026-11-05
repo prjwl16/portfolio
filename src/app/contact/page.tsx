@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 export default function ContactPage() {
 	return (
 		<Container className="py-12 sm:py-16">
-			<PageHeader title="Contact" lede="Happy to chat about side projects, developer tools, or whatever you're working on." />
+			<PageHeader title="Contact" lede="Email is the best way to reach me." />
 
 			<h2 className="text-sm font-medium text-muted">Email</h2>
 			<p className="mt-2">
-				<a className="link break-words text-xl font-medium tracking-tight sm:text-2xl" href={`mailto:${profile.email}`}>
+				<a className="link break-words" href={`mailto:${profile.email}`}>
 					{profile.email}
 				</a>
 			</p>
@@ -29,19 +29,11 @@ export default function ContactPage() {
 			</p>
 
 			<h2 className="mt-10 text-sm font-medium text-muted">Elsewhere</h2>
-			<ul className="mt-2 divide-y divide-line border-y border-line">
+			<ul className="mt-2 flex flex-wrap gap-x-4 gap-y-2">
 				{socials.map((item) => (
 					<li key={item.href}>
-						<a
-							className="flex items-center justify-between py-3 hover:text-soft"
-							href={item.href}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<span>{item.label}</span>
-							<span aria-hidden className="text-muted">
-								↗
-							</span>
+						<a className="link" href={item.href} target="_blank" rel="noopener noreferrer">
+							{item.label}
 							<span className="sr-only"> (opens in a new tab)</span>
 						</a>
 					</li>
