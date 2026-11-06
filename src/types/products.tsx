@@ -5,9 +5,12 @@ export type Product = {
   description: string;
   thumbnail: StaticImageData | string;
   images: StaticImageData[] | string[];
-  href: string;
+  href?: string;
   slug?: string;
   stack?: string[];
+  highlights?: string[];
   content?: React.ReactNode | string;
   showLinkPreview?: boolean;
+  /** Short factual label shown above the longer description. */
+  note?: string;
 };

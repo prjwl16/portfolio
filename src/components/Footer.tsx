@@ -5,7 +5,7 @@ import { wobbly } from "@/lib/wobbly";
 const links = [
 	{ label: "LinkedIn", href: "https://linkedin.com/in/moreprajwal" },
 	{ label: "GitHub", href: "https://github.com/prjwl16" },
-	{ label: "Email", href: "mailto:hello@prajwal.dev" },
+	{ label: "Email", href: "mailto:prajumore76@gmail.com" },
 ];
 
 export const Footer = () => {
