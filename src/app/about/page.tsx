@@ -17,7 +17,7 @@ export default function AboutPage() {
 		<Container className="py-16 sm:py-20">
 			<PageHeader
 				title="About"
-				lede="I'm a backend and AI engineer in Bengaluru. I've spent 4+ years at Dezy, Flipkart, and Cleartrip, mostly on AI agents and distributed systems."
+				lede="I'm a backend and AI engineer in Bengaluru. I've spent 5+ years at Dezy, Flipkart, and Cleartrip, mostly on AI agents and distributed systems."
 			/>
 
 			<div className="space-y-4">
