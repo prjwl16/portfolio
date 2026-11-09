@@ -36,8 +36,8 @@ export default function Home() {
 
 			<div className="mt-8 space-y-4">
 				<p>
-					I&apos;ve spent 4+ years at Dezy, Flipkart, and Cleartrip, mostly on AI agents and distributed systems. At Dezy I own engineering for the
-					core operations platform. Before that I worked on checkout at Flipkart and on Cleartrip for Work.
+					I&apos;ve spent 5+ years at Dezy, Flipkart, and Cleartrip, mostly on AI agents and distributed systems. At Dezy I own engineering for the
+					core operations platform. Before that I worked on checkout at Flipkart and on Cleartrip.
 				</p>
 				<p>
 					<Link href="/about" className="link">
