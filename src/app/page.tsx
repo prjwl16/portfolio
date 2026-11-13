@@ -29,8 +29,7 @@ export default function Home() {
 				/>
 				<div>
 					<h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">{profile.name}</h1>
-					<p className="mt-3 text-soft">Backend and AI engineer in {profile.location}</p>
-					<p className="mt-1 text-muted">Senior Software Engineer at Dezy</p>
+					<p className="mt-3 text-soft">Engineering, learning, breaking n building</p>
 				</div>
 			</div>
 
